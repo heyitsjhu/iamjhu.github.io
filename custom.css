@@ -1,0 +1,56 @@
+body {}
+
+ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  float: left;
+  padding-right: 10px;
+}
+li:last-child {
+  padding-right: 0;
+}
+a,
+a:visited {
+  color: black;
+}
+a:hover,
+a:active {
+  color: #18D3F1;
+}
+
+.container {
+  width: 80.46%;
+  margin: auto;
+}
+
+header {
+  height: 125px;
+}
+nav,
+.greeting {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.navbar-brand {
+  width: 75px;
+  height: 75px;
+  margin: 25px;
+  padding: 0;
+}
+#logo {
+  border-radius: 25%;
+}
+
+.greeting {
+  height: 200px;
+}
+.greeting > section {
+  width: 60%;
+}
+.greeting > aside {
+  width: 40%;
+}
