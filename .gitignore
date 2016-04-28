@@ -1,0 +1,4 @@
+# Ignore Sass Cache
+/.sass-cache
+/custom.css.map
+
