@@ -7,17 +7,11 @@ ul {
   margin: 0 auto;
   padding: 0;
   list-style-type: none; }
-  ul li {
-    padding-right: 15px; }
 
 a,
 a:visited {
   color: black;
   text-decoration: none; }
-
-a:hover,
-a:active {
-  color: #203A7C; }
 
 /* HEADER SECTION */
 header {
@@ -30,22 +24,15 @@ header {
     margin-top: 15px;
     margin-bottom: 15px;
     padding-left: 25px; }
-  header .navbar-nav {
-    align-self: center;
-    width: 66px;
-    height: 55px;
-    padding-right: 25px;
-    background-color: #FCFBFA;
-    opacity: .8;
-    text-align: center; }
-    header .navbar-nav i {
-      color: #FCBE12;
-      line-height: 55px; }
-  header .navbar-brand {
-    align-self: center;
-    font-family: 'Condiment', cursive;
-    font-weight: 700;
-    font-size: 50px; }
+    header nav #navbar-brand {
+      align-self: center;
+      font-family: 'Condiment', cursive;
+      font-weight: 700;
+      font-size: 50px; }
+      header nav #navbar-brand a:hover {
+        color: #234089; }
+    header nav #navbar-nav {
+      align-self: center; }
 
 section#main {
   display: flex;
@@ -77,11 +64,14 @@ section#main {
     margin: 15px;
     border: 0;
     border-radius: 25px;
-    background-color: #203A7C;
-    font-size: 20px;
-    font-weight: 100;
-    color: white;
-    cursor: pointer; }
+    background-color: #203A7C; }
+    section#main #portfolio-btn:hover {
+      background-color: #234089; }
+    section#main #portfolio-btn a {
+      font-size: 20px;
+      font-weight: 100;
+      color: white;
+      cursor: pointer; }
   section#main #social-media-icons {
     order: 4;
     margin: 5px; }
@@ -93,12 +83,60 @@ section#main {
       justify-content: flex-end; }
       section#main #social-media-icons ul li {
         padding-right: 0;
-        padding-left: 15px; }
+        padding-left: 20px; }
+        section#main #social-media-icons ul li:first-child {
+          padding: 0; }
+        section#main #social-media-icons ul li a:hover {
+          color: #234089; }
 
 footer {
   height: 30px;
   font-size: 12px;
   font-weight: 100;
   text-align: center; }
+
+.dropdown {
+  position: relative;
+  display: inline-block; }
+
+/* Dropdown Button */
+.dropbtn {
+  width: 91px;
+  height: 55px;
+  padding: 0 25px 0 0;
+  background-color: #FCFBFA;
+  opacity: .7;
+  color: #FCBE12;
+  border: none;
+  text-align: center;
+  cursor: pointer; }
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  opacity: 0.8; }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #FCFBFA;
+  opacity: 0.8;
+  min-width: 100%;
+  box-shadow: -2px 5px 20px 5px rgba(0, 0, 0, 0.2); }
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  padding: 12px 16px;
+  font-family: 'Francois One', sans-serif;
+  text-decoration: none;
+  display: block; }
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover, a:active {
+  font-weight: bolder; }
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block; }
 
 /*# sourceMappingURL=custom.css.map */
