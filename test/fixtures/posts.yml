@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  content: MyText
+  keywords: 
+  noindex: false
+  nofollow: false
+
+two:
+  title: MyString
+  description: MyString
+  content: MyText
+  keywords: 
+  noindex: false
+  nofollow: false
