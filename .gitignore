@@ -1,4 +1,3 @@
-# Ignore Sass Cache
-/.sass-cache
-/custom.css.map
-
+_site
+.sass-cache
+.jekyll-metadata
