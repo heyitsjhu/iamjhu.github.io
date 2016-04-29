@@ -1,0 +1,118 @@
+section#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 5px 25px;
+  #image-of-jhu {
+    order: 1;
+    width: 165px;
+    height: 165px;
+    margin: 10px;
+    background-color: #FCFBFA;
+    border-radius: 50%;
+  }
+  #slogan {
+    order: 2;
+    width: 100%;
+    h2 {
+      margin: 10px 0;
+      font-family: 'Francois One', sans-serif;
+      font-size: 40px;
+      text-transform: uppercase;
+      line-height: 40px;
+    }
+  }
+  #portfolio-btn {
+    order: 3;
+    height: 50px;
+    width: 200px;
+    margin: 15px;
+    border: 0;
+    border-radius: 25px;
+    background-color: #203A7C;
+    &:hover {
+      background-color: #234089;
+    }
+    a {
+      font-size: 20px;
+      font-weight: 100;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  #social-media-icons {
+    order: 4;
+    margin: 5px;
+    span {
+      color: black;
+    }
+    ul {
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      list-style-type: none;
+      li {
+        padding-right: 0;
+        padding-left: 20px;
+        &:first-child {
+          padding: 0;
+        }
+        a:hover {
+          color: #234089;
+        }
+      }
+    }
+  }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    width: 91px;
+    height: 55px;
+    padding: 0 25px 0 0;
+    background-color: #FCFBFA;
+    opacity: .7;
+    color: #FCBE12;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {opacity: 0.9;}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FCFBFA;
+    opacity: 0.9;
+    min-width: 100%;
+    box-shadow: -2px 5px 20px 5px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    padding: 10px 12px;
+    font-family: 'Francois One', sans-serif;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: block;
+
+    /* Change color of dropdown links on hover */
+    &:active,
+    &:hover {
+        font-weight: bolder;
+    }
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
