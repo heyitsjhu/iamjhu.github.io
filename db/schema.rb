@@ -11,17 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160429055805) do
+ActiveRecord::Schema.define(version: 20160502032850) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
-    t.string   "description"
-    t.text     "content"
-    t.string   "keywords"
-    t.boolean  "noindex",     default: false
-    t.boolean  "nofollow",    default: false
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

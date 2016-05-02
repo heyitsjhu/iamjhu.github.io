@@ -2,16 +2,8 @@
 
 one:
   title: MyString
-  description: MyString
-  content: MyText
-  keywords: 
-  noindex: false
-  nofollow: false
+  body: MyText
 
 two:
   title: MyString
-  description: MyString
-  content: MyText
-  keywords: 
-  noindex: false
-  nofollow: false
+  body: MyText
