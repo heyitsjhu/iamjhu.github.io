@@ -1,0 +1,34 @@
+header {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 20px auto;
+
+    div.navbar-brand {
+      #navbar-logo {
+        font-family: 'Condiment', cursive;
+        font-weight: 400;
+        font-size: 36px;
+        &:hover {color: #203A7C;}
+      }
+    }
+
+    div.navbar-nav {
+      ul {
+        display: flex;
+        flex-flow: row wrap;
+        a {
+          display: inline-block;
+          text-align: center;
+          padding: 14px 20px;
+          &:hover {
+            color: #f2f2f2;
+            background-color: #234089;}
+        }
+      }
+    }
+  }
+}

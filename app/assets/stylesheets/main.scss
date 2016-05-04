@@ -1,4 +1,6 @@
-@import "base/mixins.scss";
-@import "base/normalize.scss";
-@import "base/globals.scss";
-@import "styles/home.scss";
+@import 'base/normalize';
+@import 'base/globals';
+@import 'styles/header';
+@import 'styles/home';
+@import 'styles/footer';
+@import 'media-queries';

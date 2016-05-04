@@ -1,0 +1,31 @@
+@media screen and (max-width: 640px) {
+  .wrapper {
+    width: 85%;
+  }
+  header {
+    div.navbar-nav ul li a {
+      padding: 10px 14px;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  section#main {
+    margin: 0 auto;
+    #image-of-jhu {
+      width: 135px;
+      height: 135px;
+      margin: 0 auto;
+    }
+    div#greeting-box {
+      h2#slogan {
+        font-size: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+  footer {
+    div#footer-ribbon {flex-direction: column;}
+    div#copyright {order: 2;}
+    div#social-media {order: 1;}
+  }
+}

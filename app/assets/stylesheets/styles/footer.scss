@@ -1,0 +1,35 @@
+footer {
+  margin: 25px 0 5px 0;
+  border: 1px solid red;
+  div#footer-ribbon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    div {
+      margin: 2.5px 0;
+    }
+  }
+  div#copyright {
+    order: 1;
+    font-size: 12px;
+  }
+  div#social-media {
+    order: 2;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      li {
+        padding-right: 0;
+        padding-left: 10px;
+        &:first-child {
+          padding: 0;
+        }
+        a:hover {
+            color: #234089;
+        }
+      }
+    }
+  }
+}
