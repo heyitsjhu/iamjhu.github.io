@@ -39,3 +39,4 @@ defaults:
       layout: "post"
       categories: ["blog", "ruby"]
       author: "iamjhu"
+      tags: ["ruby", "coding", "programming", "tech"]
