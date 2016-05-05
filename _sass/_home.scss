@@ -1,0 +1,38 @@
+section.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px auto;
+  
+  #image-of-jhu {
+    order: 1;
+    width: 165px;
+    height: 165px;
+    margin: 10px;
+    background-color: #FCFBFA;
+    border-radius: 50%;
+  }
+  
+  div#greeting-box {
+    order: 2;
+    width: 100%;
+    h2#slogan {
+      margin: 10px 0;
+      font-family: "Francois One", sans-serif;
+      font-size: 40px;
+      text-transform: uppercase;
+      line-height: 40px;
+    }
+  }
+  
+  #portfolio-btn {
+    order: 3;
+    padding: 7px 20px;
+    background-color: #234089;
+    color: #f2f2f2;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+  }
+}
