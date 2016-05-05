@@ -127,10 +127,11 @@ code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: $grey-color-light;
 }
 
 code {
+    color: #900;
     padding: 1px 5px;
 }
 
@@ -167,6 +168,29 @@ pre {
     }
 }
 
+/**
+ * Call To Action Button
+ */
+
+.cta-btn {
+    padding: 7px 20px;
+    background-color: #234089;
+    color: #f2f2f2;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+/**
+ * HEADSHOT IMAGE OUTLINE
+ */
+.headshot-img {
+    width: 165px;
+    height: 165px;
+    margin: 10px;
+    background-color: #FCFBFA;
+    border-radius: 50%;
+}
 
 
 /**

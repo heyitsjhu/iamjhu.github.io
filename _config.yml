@@ -9,7 +9,7 @@
 title: iamjhu
 owner: Johnny Hu
 email: jgeehen.hu@gmail.com
-copyright: Copyright &copy; 2016 iamjhu. All Rights Reserved.
+copyright: Copyright &copy; 2016 iamjhu. All rights reserved.
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -37,6 +37,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      categories: ["blog", "ruby"]
+      category: ["blog", "ruby"]
       author: "iamjhu"
       tags: ["ruby", "coding", "programming", "tech"]
+
