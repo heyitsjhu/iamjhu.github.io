@@ -13,7 +13,7 @@ permalink: /blog/
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         <p class="post-meta">
           Posted on {{ post.date | date: "%b %-d, %Y" }} by {{ post.author }} | 
-          <a class="comments-count" href="{{ post.url | prepend: site.baseurl }}#disqus_thread"></a>
+          <a class="comments-count" href="{{ post.url | prepend: site.url }}#disqus_thread"></a>
         </p>
 
         {{ post.excerpt | remove: "<p>" | remove: "</p>"}} 
