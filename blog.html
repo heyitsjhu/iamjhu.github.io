@@ -10,9 +10,10 @@ permalink: /blog/
   
     {% for post in site.posts %}
       <li>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         <p class="post-meta">
-          Posted on {{ post.date | date: "%b %-d, %Y" }} by {{ post.author }}
+          Posted on {{ post.date | date: "%b %-d, %Y" }} by {{ post.author }} | 
+          <a class="comments-count" href="{{ post.url | prepend: site.baseurl }}#disqus_thread" data-disqus-identifier="{{ post.url | prepend: site.url }}"></a>
         </p>
 
         {{ post.excerpt | remove: "<p>" | remove: "</p>"}} 
@@ -30,4 +31,5 @@ permalink: /blog/
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
+  <script id="dsq-count-scr" src="//iamjhu.disqus.com/count.js" async></script>
 </div>

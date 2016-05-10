@@ -18,7 +18,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.iamjhu.com" # the base hostname & protocol for your site
 github_username:  iamjhu
-linkedin_username: iamjhu
+linkedin_username: jgeehenhu
 facebook_username: jhu1986
 twitter_username: iamjhu
 instagram_username: jhuphotos
@@ -38,7 +38,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      category: ["blog", "ruby"]
       author: "iamjhu"
+      category: ["blog", "ruby"]
       tags: ["ruby", "coding", "programming", "tech"]
 
