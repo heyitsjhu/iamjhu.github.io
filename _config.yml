@@ -39,6 +39,5 @@ defaults:
     values:
       layout: "post"
       author: "iamjhu"
-      category: ["blog", "ruby"]
       tags: ["ruby", "coding", "programming", "tech"]
 
