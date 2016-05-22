@@ -1,9 +1,0 @@
----
-title: "Test Post 2"
-date: 2016-05-18 16:08:10 -0700
-disqus_identifier: "2e34b586-c727-4545-a7d8-ff5cc92beb57"
----
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam egestas mi risus, ac ullamcorper dolor mattis a. Aenean gravida, mi ut tincidunt feugiat, nulla justo ultrices erat, non volutpat felis lorem sed diam. Nullam venenatis laoreet porta. Duis pharetra justo ut ante consectetur, vel vulputate elit hendrerit. Maecenas accumsan vel mauris in accumsan. Nunc molestie mollis felis, a rutrum ligula aliquam et. Aenean non enim tincidunt, rhoncus libero non, posuere eros.
-
-Duis scelerisque sem quis tristique sollicitudin. Nullam ultricies neque nisi, sed pulvinar mauris euismod ac. Sed convallis venenatis eleifend. Fusce lorem lacus, dictum quis posuere nec, egestas ac risus. Proin porta, nisl in tempor iaculis, nunc nisi gravida felis, sed rhoncus est orci vulputate purus. Vestibulum ornare ornare aliquet. Quisque cursus ligula ligula, in tincidunt nulla egestas id. Nulla sollicitudin suscipit arcu posuere malesuada. Fusce in placerat magna, et vestibulum quam. Vestibulum placerat congue leo, non euismod turpis vulputate non. Vivamus at metus non nibh pharetra consequat. Nunc laoreet velit molestie viverra rutrum. Nunc rhoncus efficitur neque vitae lobortis. Nam rutrum nunc vitae ante cursus tempus. Nam lectus augue, mattis non congue non, mattis sed ex.
