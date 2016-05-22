@@ -2,6 +2,7 @@
 title: "Setting Up Categories in Jekyll"
 date: 2016-05-21 17:44:20 -0700
 disqus_identifier: "1e90b835-9580-41c4-a05a-eafc158e84b7"
+tags: [jekyll, categories]
 ---
 
 I recently transitioned over from WordPress to Jekyll because I wanted more control over the layout of the blog. Working through Jekyll's guide, I was initially excited when I came across the [Front Matter][1] section and read that, instead of having to place my posts in separate folders, I can just use Jekyll's Category/Categories global variable to set my post's category. All I had to do was add the category to my post's front matter, like so:
