@@ -1,0 +1,69 @@
+section.main-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p.headline-text {
+    text-align: center;
+    letter-spacing: 0.0125em;
+  }
+
+  span.highlight {
+    font-family: $alt-font-family;
+    font-weight: bolder;
+    color: $brand-color;
+    background-color: transparent;
+  }
+  
+  div.message {
+    margin-top: 1.5625em;
+  }
+
+  div.buttons-group {
+    padding-top: ($spacing-unit * 1.5);
+    padding-bottom: ($spacing-unit * 2);
+    margin-left: auto;
+    margin-right: auto; 
+  }
+
+  .button {
+    width: 104px;
+    height: 40px;
+    padding: 10px 28px;
+    color: $brand-color;
+    font-family: $alt-font-family;
+    letter-spacing: 0.09375em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #blog-button {
+    margin-right: 5px;
+    border: 3px solid $brand-color;
+    cursor: pointer;
+  }
+
+  #work-button {
+    border: 3px solid #999999;
+    color: #555555;
+  }
+
+  .social-media-icons {
+      text-align: center;
+      
+      a {
+          margin-right: ($spacing-unit / 2);      
+          &:last-child {
+              margin-right: 0;
+          };
+      }
+
+      img {
+          height: 23px;
+
+          @include media-query($on-tablet) {
+              height: 25px;
+           }
+      }
+  }
+}

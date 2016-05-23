@@ -16,7 +16,7 @@ dl, dd, ol, ul, figure {
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
-    background-color: $background-color;
+    background-color: $background-color; 
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -24,6 +24,12 @@ body {
     font-feature-settings: "kern" 1;
     font-kerning: normal;
 }
+
+@include media-query($on-tablet) {
+    body {
+        font-size: $base-font-size * 1.25
+    }
+ }
 
 
 
@@ -34,10 +40,8 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: $spacing-unit * 0.75;
 }
-
-
 
 /**
  * Images
@@ -76,16 +80,15 @@ ul, ol {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
+    font-family: $alt-font-family;
     font-weight: $base-font-weight;
+    color: $brand-color;
 }
-
-
 
 /**
  * Links
  */
 a {
-    color: $brand-color;
     text-decoration: none;
     &:hover {
         color: $text-color;
@@ -101,8 +104,7 @@ blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
+    font-size: 16px;
     font-style: italic;
 
     > :last-child {
@@ -113,19 +115,19 @@ blockquote {
 
 
 /**
- * Code formatting
+ * CODE FORMATTING
  */
 pre,
 code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
+    font-size: 95%;
+    border: 2px solid $grey-color-light;
     border-radius: 3px;
-    background-color: $grey-color-light;
 }
 
 code {
     color: #900;
-    padding: 1px 5px;
+    padding: 2px 7px;
+    background-color: $grey-color-light;
 }
 
 pre {
@@ -136,6 +138,7 @@ pre {
         border: 0;
         padding-right: 0;
         padding-left: 0;
+        background-color: transparent;
     }
 }
 
@@ -156,33 +159,7 @@ pre {
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
     }
-}
-
-/**
- * Call To Action Button
- */
-
-.cta-btn {
-    padding: 7px 20px;
-    background-color: #234089;
-    color: #f2f2f2;
-    text-align: center;
-    line-height: 35px;
-    cursor: pointer;
-}
-
-/**
- * HEADSHOT IMAGE OUTLINE
- */
-.headshot-img {
-    width: 165px;
-    height: 165px;
-    margin: 10px;
-    background-color: #FCFBFA;
-    border-radius: 50%;
 }
 
 
@@ -197,22 +174,3 @@ pre {
         clear: both;
     }
 }
-
-
-
-/**
- * Icons
- */
-/*.icon {
-
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
-    }
-}*/

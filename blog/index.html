@@ -6,23 +6,32 @@ permalink: /blog/
 
 <div class="blog">
 
-  <ul class="post-list">
+  <ul class="blog-listing">
   
-    {% for post in site.posts %}
-      <li>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    {% for post in site.posts limit:3 %}
+      
+      <li class="list-item">
+
+        <div>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            {{ post.title }}
+          </a>
+        </div>
+
         <p class="post-meta">
-          Posted on {{ post.date | date: "%b %-d, %Y" }} by {{ post.author }} | 
+          {{ post.date | date: "%b %-d, %Y" }} | 
           <a href="{{ post.url }}/#disqus_thread" data-disqus-identifier="{{ post.disqus_identifier }}"></a>
         </p>
-
-        {{ post.excerpt | remove: "<p>" | remove: "</p>"}} 
         
-        <p class="read-more-link">
-          <a href="{{ post.url | prepend: site.baseurl }}">
-            Read More &raquo;
-          </a>
-        </p>
+        <div class="post-excerpt">
+          {{ post.excerpt | remove: "<p>" | remove: "</p>"}} 
+          
+          <p class="read-more-link">
+            <a href="{{ post.url | prepend: site.baseurl }}">
+              Read More &raquo;
+            </a>
+          </p>
+        </div>
 
       </li>
     {% endfor %}

@@ -2,33 +2,45 @@
 layout: default
 ---
 
-<section class="home">
-
-  <img src="" alt="" class="headshot-img" id="image-of-jhu" />
-
-  <ul class="recent-post">
+<section class="main-index">
   
-    {% for post in site.posts limit:1 %}
-      <li>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <p class="post-meta">
-          Posted on {{ post.date | date: "%b %-d, %Y" }} by {{ post.author }}
-        </p>
+  <p class="headline-text">I'm Johnny, a <br />
+    <span class="highlight">web design</span> + <span class="highlight">development</span> <br />
+    newbie
+  </p>
 
-        {{ post.content }}
-        
-        <p>
-          Tags: 
-          {% for tag in post.tags %}
-            <span class="post-tags"> {{ tag }} </span>
-          {% endfor %}
-        </p>
+  <div class="message">
+    <p>I always wanted to be able to create my own websites. There’s much to learn in this industry, I can hardly wrap my head around everything. But I’m going to try!</p>
 
-      </li>
-    {% endfor %}
+    <p>Along the way, I’ll blog about the things I learn, the designs I create, and sometimes my personal thoughts, so be sure to check it out.</p>
+  </div>
+  
+  <div class="buttons-group">
+    <a href="/blog" class="button" id="blog-button">Blog</a>
+    <a class="button" id="work-button">Work</a>
+  </div>
 
-  </ul>
-
-  <a href="/blog" class="cta-btn" id="blog-btn">View Blog</a>
-
+  <div class="social-media-icons">
+      <a href="http://www.linkedin.com/{{ site.linkedin_username }}">
+        <img src="/assets/logos/linkedin.svg" />
+      </a>
+      <a href="http://www.twitter.com/{{ site.twitter_username }}">
+        <img src="/assets/logos/twitter.svg" />
+      </a>
+      <a href="http://www.facebook.com/{{ site.facebook_username }}">
+        <img src="/assets/logos/facebook.svg" />
+      </a>
+      <a href="http://www.instagram.com/{{ site.instagram_username }}">
+        <img src="/assets/logos/instagram.svg" />
+      </a>
+      <a href="http://www.github.com/{{ site.github_username }}">
+        <img src="/assets/logos/github.svg" />
+      </a>
+      <a href="http://www.behance.com/{{ site.behance_username }}">
+        <img src="/assets/logos/behance.svg" />
+      </a>
+      <a href="http://www.dribbble.com/{{ site.dribbble_username }}">
+        <img src="/assets/logos/dribbble.svg" />
+      </a>
+    </div>
 </section>

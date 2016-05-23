@@ -20,9 +20,8 @@ layout: default
 
   <div class="tags">
     <p>
-      Tags: 
       {% for tag in page.tags %}
-        <span class="post-tags"> {{ tag }}</span>
+        <span class="post-tags"> <img class="post-tag-icon" src="/assets/icons/tag.png"/> {{ tag }}</span>
       {% endfor %}
     </p>
   </div>
