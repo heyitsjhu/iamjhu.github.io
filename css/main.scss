@@ -4,36 +4,43 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+$base-font-family: "Raleway", Helvetica, sans-serif;
 $base-font-size:   100%;
 $base-font-weight: 400;
-$base-line-height: 1.6em;
-$small-font-size:  $base-font-size * 0.75;
+$base-line-height: 1.6;
 
-$alt-font-family: Montserrat, Helvetica, Arial, sans-serif;
+$small-font-size:  $base-font-size * 0.875;
+$smaller-font-size: $base-font-size * 0.75;
+
+$heading-font-family: "Montserrat", Helvetica, sans-serif;
+
+$mobile-letter-spacing: 0.4px;
+$tablet-letter-spacing: 0.6px;
+$desktop-letter-spacing: 0.8px;
 
 $spacing-unit:     20px;
 
-$text-color:       #555555;
+$text-color:       #363030;
 $background-color: #FAFAFA;
-$brand-color:      #4D157E;
+$brand-color:      #7A509F;
+$secondary-color:  #4D157E;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-// Width of the content area
-$content-width:    800px;
 
-$on-palm:          600px;
+// Width of the content area
+$content-width:    850px;
+
 $on-tablet:        768px;
-$on-laptop:        1024px;
+$on-desktop:        1024px;
 $on-hd-screen:     1400px;
 $show-twitter:       1200px;
 
 
 // Use media queries like this:
-// @include media-query($on-palm) {
+// @include media-query($on-tablet) {
 //     .wrapper {
 //         padding-right: $spacing-unit / 2;
 //         padding-left: $spacing-unit / 2;

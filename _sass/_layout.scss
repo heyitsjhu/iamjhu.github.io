@@ -39,7 +39,7 @@ header.site-header {
         }
     }
 
-    @include media-query($on-palm) {
+    @include media-query($on-tablet) {
         position: absolute;
         margin-top: 20px;
         padding: 0;
@@ -92,41 +92,68 @@ header.site-header {
 /**
  * BLOG INDEX PAGE
  */
-.blog-listing {
-    margin-left: 0;
-    list-style: none;
 
-    > li {
-        margin-bottom: $spacing-unit * 2;
-    }
-}
+ul.post-list {
+  margin-left: 0;
+  list-style: none;
 
-.list-item {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: $spacing-unit;
+  > li {
+    margin-top: 20px;
+    padding-bottom: $spacing-unit * 1.5;
     border-bottom: 2px solid $brand-color;
+
+    &:last-child {
+      border-bottom: none;
+    };
+
+    @include media-query($on-tablet) {
+      margin-top: 40px;
+    }
+
+    @include media-query($on-desktop) {
+      margin-top: 50px;
+    }
+  }
 }
 
-.category-label, .post-meta {
-    font-family: $alt-font-family;
-    font-size: $small-font-size;
+span.post-category {
+  color: $brand-color;
+  border: 3px solid $brand-color;
+  padding: 4px 8px;
 }
 
-.category-label {
-    border: 2px solid $brand-color;
-    padding: 2px 5px;
-    float: right;
+.post-date {
+  font-size: $small-font-size;
+  display: none;
 }
 
-.post-link {
-    font-family: $alt-font-family;
-    font-size: 1.25em;;
+.post-title {
+  margin-top: 5px;
+
+  a {
+    color: $text-color;
+  }
 }
 
 .read-more-link {
-    text-decoration: underline;
+  margin-top: 10px;
+  font-weight: 700;
+  text-decoration: underline;
+}
 
+@include media-query($on-tablet) {
+  .post-date {
+    display: block;
+  }
+
+  .post-title {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  .read-more-link {
+    margin-top: 20px;
+  }
 }
 
 /**
@@ -142,11 +169,8 @@ header.site-header {
 }
 
 .post-tags {
-    font-family: $alt-font-family;
     margin: 0 2px;
     padding: 2px 5px;
-    opacity: 0.7;
-    font-size: $small-font-size;
 }
 
 .post-tag-icon {
@@ -156,14 +180,20 @@ header.site-header {
 /**
  * SITE FOOTER
  */
-.site-footer {
-    padding: ($spacing-unit / 2) 0;
+footer.site-footer {
+  height: 40px;
+  background-color: #F6F6F6;
+  padding-top: 20px;
 
-    .footer-copyright {
-        font-size: $small-font-size;
-        text-align: center;
-        letter-spacing: 0.01667em;
-    }
+  .footer-copyright {
+    font-size: $small-font-size;
+    text-align: center;
+  }
+
+  @include media-query($on-tablet) {
+    height: 60px;
+    padding-top: 30px;
+  }
 }
 
 /**
@@ -180,7 +210,6 @@ header.site-header {
         padding: 7px 20px;
         border: 3px solid #3B94D9;
         color: #3B94D9;
-        font-family: $alt-font-family;
         text-align: center;
         cursor: pointer;
     }

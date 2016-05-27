@@ -15,6 +15,7 @@ dl, dd, ol, ul, figure {
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    letter-spacing: $mobile-letter-spacing;
     color: $text-color;
     background-color: $background-color; 
     -webkit-text-size-adjust: 100%;
@@ -27,9 +28,17 @@ body {
 
 @include media-query($on-tablet) {
     body {
-        font-size: $base-font-size * 1.25
+        font-size: $base-font-size * 1.125;
+        letter-spacing: $tablet-letter-spacing;
     }
- }
+}
+
+@include media-query($on-desktop) {
+    body {
+        font-size: $base-font-size * 1.25;
+        letter-spacing: $desktop-letter-spacing;
+    }
+}
 
 
 
@@ -41,6 +50,14 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: $spacing-unit * 0.75;
+
+    @include media-query($on-tablet) {
+        margin-bottom: $spacing-unit;
+    }
+
+    @include media-query($on-tablet) {
+        margin-bottom: $spacing-unit * 1.5;
+    }
 }
 
 /**
@@ -61,7 +78,7 @@ figure > img {
 }
 
 figcaption {
-    font-size: $small-font-size;
+    font-size: $smaller-font-size;
 }
 
 
@@ -80,22 +97,42 @@ ul, ol {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-family: $alt-font-family;
-    font-weight: $base-font-weight;
-    color: $brand-color;
+    font-weight: 700;
+}
+
+@include media-query($on-tablet) { 
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6 {
+        font-size: 14px;
+    }
 }
 
 /**
  * Links
  */
 a {
+    font-weight: 700;
+    color: $brand-color;
     text-decoration: none;
+
     &:hover {
-        color: $text-color;
-    }
+        color: $secondary-color;
+    };
 }
-
-
 
 /**
  * Blockquotes
@@ -156,7 +193,7 @@ pre {
     padding-left: $spacing-unit;
     @extend %clearfix;
 
-    @include media-query($on-laptop) {
+    @include media-query($on-desktop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
     }
