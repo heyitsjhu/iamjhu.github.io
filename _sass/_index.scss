@@ -1,4 +1,4 @@
-section.index {
+section.main {
   div.banner {
     padding: 20px 27px 20px 28px;
     background-color: #F6F6F6;
@@ -13,10 +13,6 @@ section.index {
 
   .social-media-icons {
     display: none;
-
-    img {
-      height: 25px;
-    }
   
     a {
       margin-right: ($spacing-unit / 2);      
@@ -28,7 +24,7 @@ section.index {
 }
 
 @include media-query($on-tablet) {
-  section.index {
+  section.main {
     div.banner {
       padding: 40px 65px;
 
@@ -44,7 +40,7 @@ section.index {
 }
 
 @include media-query($on-desktop) {
-  section.index {
+  section.main {
     div.banner {
       padding: 50px 150px;
     }
