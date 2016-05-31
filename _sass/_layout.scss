@@ -122,8 +122,11 @@ span.post-category {
   padding: 4px 8px;
 }
 
-.post-date {
+.post-meta, .post-date {
   font-size: $small-font-size;
+}
+
+.post-date {
   display: none;
 }
 
@@ -163,12 +166,18 @@ span.post-category {
     margin-bottom: $spacing-unit;
 
     .post-title {
-        font-size: 1.25em;
+        font-size: 1.4em;
         margin-bottom: 0;
     }
 }
 
+.tags {
+  margin-bottom: $spacing-unit * 2;
+  border-bottom: 3px solid $brand-color;
+}
+
 .post-tags {
+  font-size: $small-font-size;
     margin: 0 2px;
     padding: 2px 5px;
 }
