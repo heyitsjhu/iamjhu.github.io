@@ -35,7 +35,10 @@ Going back to our example, one scenario where this approach may become troubleso
 
 These are the types of things you need to think about when you're deciding on which approach to take to tackle a problem. For me, given the above scenario, I decided to go with the alternate approach instead—placing posts in folders. Instead of identifying the categories within each post's front matter, I create a development folder within my site's blog folder. Inside the development folder, I create a _posts subfolder and store all of my posts related to that development into that subfolder. Visually, the folder structure would look something like this:
 
-![Screenshot of folder structure with category folders]({{ site.url }}/assets/images/2016-05-21-category-folder-structure.png)
+{% include image.html 
+    url="/assets/images/2016-05-21-category-folder-structure.png" 
+    description="Screenshot of folder structure with category folders: design and development." 
+%}
 
 Let's break this down real quick.
 
@@ -48,7 +51,10 @@ Now, some might argue that this folder structure will become cluttered over time
 
 For my purposes, which is a blog with a few targeted categories, I feel this approach works best because if, down the road, I decide to change my `development` category to `web development`, all I need to do is rename the folder.
 
-![Screenshot of folder structure with category folders]({{ site.url }}/assets/images/2016-05-21-category-folder-structure-renamed.png)
+{% include image.html 
+    url="/assets/images/2016-05-21-category-folder-structure-renamed.png" 
+    description="Screenshot of folder structure with updated category folders: design and web development." 
+%}
 
 By performing this one action, the permalinks of all the posts belonging to this category is updated automatically. The permalink for my example post is now:
 
