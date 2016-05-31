@@ -52,7 +52,7 @@ layout: default
               {{ post.date | date: "%b %-d, %Y" }}
             </p>
 
-            {{ post.excerpt | remove: "<p>" | remove: "</p>"}} 
+            {{ post.excerpt }} 
             
             <p class="read-more-link">
               <a href="{{ post.url | prepend: site.baseurl }}">

@@ -55,7 +55,7 @@ ul, ol, dl, figure,
         margin-bottom: $spacing-unit;
     }
 
-    @include media-query($on-tablet) {
+    @include media-query($on-desktop) {
         margin-bottom: $spacing-unit * 1.5;
     }
 }
@@ -73,14 +73,16 @@ img {
 /**
  * Figures
  */
-figure > img {
-    display: block;
+figure {
+    display: table;
 }
 
 figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    text-align: center;
     font-size: $smaller-font-size;
 }
-
 
 
 /**
@@ -156,15 +158,12 @@ blockquote {
  */
 pre,
 code {
-    font-size: 95%;
-    border: 2px solid $grey-color-light;
-    border-radius: 3px;
+    letter-spacing: 1px;
 }
 
 code {
     color: #900;
-    padding: 2px 7px;
-    background-color: $grey-color-light;
+    padding: 2px;
 }
 
 pre {
