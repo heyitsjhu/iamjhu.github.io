@@ -51,8 +51,9 @@ layout: default
             <p class="post-date">
               {{ post.date | date: "%b %-d, %Y" }}
             </p>
-
-            {{ post.excerpt }} 
+            <div class="post-excerpt">
+              {{ post.excerpt }} 
+            </div>
             
             <p class="read-more-link">
               <a href="{{ post.url | prepend: site.baseurl }}">

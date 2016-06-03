@@ -138,6 +138,12 @@ span.post-category {
   }
 }
 
+.post-excerpt {
+  a {
+    font-weight: 400;
+  }
+}
+
 .read-more-link {
   margin-top: 10px;
   font-weight: 700;
@@ -162,6 +168,13 @@ span.post-category {
 /**
  * POSTS
  */
+
+.post {
+  a {
+    font-weight: 400;
+  }
+}
+
 .post-header {
     margin-bottom: $spacing-unit;
 

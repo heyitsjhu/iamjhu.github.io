@@ -2,8 +2,14 @@
  * Syntax highlighting styles
  */
 .highlight {
-    background: #fff;
+    width: 100%;
+    background: $grey-color;
+    border-radius: 5px;
     @extend %vertical-rhythm;
+
+    pre:first-child {
+        margin-bottom: 0;
+    }
 
     .highlighter-rouge & {
       background: #eef;

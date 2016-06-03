@@ -11,7 +11,8 @@ Alright, so here's the first one: **the receiver** and **the method**.
 
 {% include image.html 
     url="/assets/images/2016-05-31-receiver-and-method-01.png" 
-    description="An image showing the receiver (a string) and the method (the index method) in the Ruby code 'Johnny'.index('h')." 
+    description="An image showing the receiver (a string) and the method (the index method) in the Ruby code 'Johnny'.index('h')."
+    caption="" 
 %}
 
 And this is how I make sense of their interaction with each other!
@@ -19,6 +20,7 @@ And this is how I make sense of their interaction with each other!
 {% include image.html 
     url="/assets/images/2016-05-31-receiver-and-method-02.png" 
     description="The same image but with added dialogue, where the method asks the receiver which index position the letter 'h' is in the string 'Johnny'. The answer is index position 2." 
+    caption=""
 %}
 
 How do you interpret the interaction between a receiver and its method? I'd love to hear about it! 
