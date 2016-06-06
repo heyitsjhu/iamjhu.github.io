@@ -12,7 +12,7 @@ email: jgeehen.hu@gmail.com
 copyright: "&copy; 2016 iamjhu. All rights reserved."
 description: > # this means to ignore newlines until "baseurl:"
   Failures. Triumphs. And a lot of caffeine.
-  This is my personal journey and dive into web development and applications..
+  This is my personal journey and dive into web development and applications.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.iamjhu.com" # the base hostname & protocol for your site
 linkedin_username: jgeehenhu
