@@ -34,15 +34,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit * 0.75;
-
-    @include media-query($on-tablet) {
-        margin-bottom: $spacing-unit;
-    }
-
-    @include media-query($on-desktop) {
-        margin-bottom: $spacing-unit * 1.5;
-    }
+    margin-bottom: $spacing-unit;
 }
 
 /**

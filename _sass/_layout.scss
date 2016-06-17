@@ -3,6 +3,7 @@
  */
 header.site-header {
     display: flex;
+    margin-bottom: $spacing-unit;
     min-height: 160px;
 
     // Positioning context for the mobile navigation icon: ;
@@ -63,20 +64,15 @@ header.site-header {
 }
 
 /**
- * PAGE CONTENT
+ * MAIN CONTENT CONTAINER
  */
-.page-content {
-    flex: 1;
-    padding: ($spacing-unit * 0.75) 0;
+section.main-content {
+    /* Expands container, pushing footer to bottom of vewport, when content is sparse */
+    flex: 1; 
 }
-
-.page-heading {
-    font-size: 20px;
-}
-
 
 /**
- * BLOG INDEX PAGE
+ * MUSING INDEX PAGE
  */
 
 ul.post-list {
@@ -152,21 +148,26 @@ span.post-category {
 }
 
 /**
- * POSTS
+ * MUSINGS (POSTS)
  */
-
-.post {
-  a {
-    font-weight: 400;
-  }
-}
-
-.post-header {
+header.musing-header {
     margin-bottom: $spacing-unit;
 
-    .post-title {
-        font-size: 1.4em;
-        margin-bottom: 0;
+    nav.musing-nav {
+        width: 100%;
+        font-size: $small-font-size;
+        overflow: auto;
+        a {
+            display: block;
+            max-width: 35%;
+        }
+        a.prev {
+            float: left;
+        }
+        a.next {
+            float: right;
+            text-align: right;
+        }
     }
 }
 

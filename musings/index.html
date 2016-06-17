@@ -5,8 +5,11 @@ permalink: /musings/
 weight: 4
 ---
 
-  <div class="wrapper">
-    <div class="blog-listing">
+<section class="musings">
+  <div class="musings-nav">
+  </div>
+  <div class="most-recent">
+  </div>
       <ul class="post-list">
       
         {% for post in site.posts limit:5 %}
@@ -34,8 +37,8 @@ weight: 4
 
       </ul>
   </div>
-</div>
-
+</section>
+<!--
 <div class="blog">
 
   <ul class="blog-listing">
@@ -73,3 +76,5 @@ weight: 4
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
+</section>
+-->
