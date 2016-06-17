@@ -78,8 +78,6 @@ ul, ol {
     list-style-type: disc;
 }
 
-
-
 /**
  * Headings
  */
@@ -116,6 +114,7 @@ a {
 
     &:hover {
         color: $secondary-color;
+        font-weight: bold;
     };
 }
 
@@ -133,8 +132,6 @@ blockquote {
         margin-bottom: 0;
     }
 }
-
-
 
 /**
  * CODE FORMATTING
