@@ -4,28 +4,28 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Raleway", Helvetica, sans-serif;
+$base-font-family: "PT Sans", sans-serif;
 $base-font-size:   100%;
 $base-font-weight: 400;
-$base-line-height: 1.6;
+$base-line-height: 1.8;
 
 $small-font-size:  $base-font-size * 0.875;
 $smaller-font-size: $base-font-size * 0.75;
 
-$heading-font-family: "Montserrat", Helvetica, sans-serif;
+$heading-font-family: "PT Serif", serif;
 
 $mobile-letter-spacing: 0.4px;
 $tablet-letter-spacing: 0.6px;
-$desktop-letter-spacing: 0.8px;
+$desktop-letter-spacing: 1px;
 
 $spacing-unit:     20px;
 
-$text-color:       #363030;
-$background-color: #FAFAFA;
-$brand-color:      #7A509F;
-$secondary-color:  #4D157E;
+$text-color:       #202020;
+$background-color: #F6F6F6;
+$brand-color:      #1B95BF;
+$secondary-color:  #196681;
 
-$grey-color:       #EFEFEF;
+$grey-color:       #B6B6B6;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
@@ -36,7 +36,6 @@ $content-width:    850px;
 $on-tablet:        768px;
 $on-desktop:        1024px;
 $on-hd-screen:     1400px;
-$show-twitter:       1200px;
 
 
 // Use media queries like this:

@@ -15,12 +15,9 @@ dl, dd, ol, ul, figure {
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    letter-spacing: $mobile-letter-spacing;
+    letter-spacing: $desktop-letter-spacing;
     color: $text-color;
     background-color: $background-color; 
-    background-image: url("../assets/images/bg.jpeg");
-    background-position: left top;
-    background-size: 100%;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
        -moz-font-feature-settings: "kern" 1;
@@ -87,35 +84,33 @@ ul, ol {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font-family;
     font-weight: 700;
 }
 
-@include media-query($on-tablet) { 
-    h1 {
-        font-size: 36px;
-    }
-    h2 {
-        font-size: 24px;
-    }
-    h3 {
-        font-size: 20px;
-    }
-    h4 {
-        font-size: 18px;
-    }
-    h5 {
-        font-size: 16px;
-    }
-    h6 {
-        font-size: 14px;
-    }
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1.17rem;
+}
+h4 {
+    font-size: 1.12rem;
+}
+h5 {
+    font-size: 0.83rem;
+}
+h6 {
+    font-size: 0.75rem;
 }
 
 /**
  * Links
  */
 a {
-    font-weight: 700;
     color: $brand-color;
     text-decoration: none;
 
