@@ -167,8 +167,8 @@ pre {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-left: 8.47222%;
-    padding-right: 8.47222%;
+    padding-left: $col-width * 2;
+    padding-right: $col-width * 2;
 /*    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
