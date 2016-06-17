@@ -2,7 +2,48 @@
 layout: page
 title: Blog
 permalink: /blog/
+weight: 4
 ---
+
+
+<div class="banner">
+    <div class="wrapper">
+      <p>Failures. Triumphs. And a lot of caffeine. <br />
+         This is my personal journey and dive into web development and applications.
+      </p>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="blog-listing">
+      <ul class="post-list">
+      
+        {% for post in site.posts limit:5 %}
+          <li class="list-item">
+            <span class="post-category">{{ post.categories[1] }}</span>
+            
+            <h2 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">
+              {{ post.title }}
+            </a></h2>
+
+            <p class="post-date">
+              {{ post.date | date: "%b %-d, %Y" }}
+            </p>
+            <div class="post-excerpt">
+              {{ post.excerpt }} 
+            </div>
+            
+            <p class="read-more-link">
+              <a href="{{ post.url | prepend: site.baseurl }}">
+                Read More &raquo;
+              </a>
+            </p>
+          </li>
+        {% endfor %}
+
+      </ul>
+  </div>
+</div>
 
 <div class="blog">
 

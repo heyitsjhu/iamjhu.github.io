@@ -18,28 +18,16 @@ body {
     letter-spacing: $mobile-letter-spacing;
     color: $text-color;
     background-color: $background-color; 
+    background-image: url("../assets/images/bg.jpeg");
+    background-position: left top;
+    background-size: 100%;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
-    -moz-font-feature-settings: "kern" 1;
-    -o-font-feature-settings: "kern" 1;
-    font-feature-settings: "kern" 1;
+       -moz-font-feature-settings: "kern" 1;
+         -o-font-feature-settings: "kern" 1;
+            font-feature-settings: "kern" 1;
     font-kerning: normal;
 }
-
-@include media-query($on-tablet) {
-    body {
-        font-size: $base-font-size * 1.125;
-        letter-spacing: $tablet-letter-spacing;
-    }
-}
-
-@include media-query($on-desktop) {
-    body {
-        font-size: $base-font-size * 1.25;
-        letter-spacing: $desktop-letter-spacing;
-    }
-}
-
 
 
 /**
@@ -183,8 +171,13 @@ pre {
 /**
  * Wrapper
  */
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-left: 8.47222%;
+    padding-right: 8.47222%;
+/*    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
@@ -196,6 +189,7 @@ pre {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
     }
+*/
 }
 
 

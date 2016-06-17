@@ -10,17 +10,6 @@ section.main {
       line-height: 1.4;
     }
   }
-
-  .social-media-icons {
-    display: none;
-  
-    a {
-      margin-right: ($spacing-unit / 2);      
-        &:last-child {
-            margin-right: 0;
-        };
-    }
-  }
 }
 
 @include media-query($on-tablet) {
