@@ -153,12 +153,14 @@ pre {
 
 
 /**
- * Wrapper
+ * CUSTOM GLOBAL SETTINGS
  */
-.container {
+.flex-column {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+.wrapper {
     padding-left: $col-width * 2;
     padding-right: $col-width * 2;
 /*    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));

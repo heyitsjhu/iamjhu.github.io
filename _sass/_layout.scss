@@ -3,6 +3,8 @@
  */
 header.site-header {
     display: flex;
+    margin-left: $col-width;
+    margin-right: $col-width;
     margin-bottom: $spacing-unit;
     min-height: 160px;
 
@@ -193,6 +195,8 @@ footer.site-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: $col-width;
+    margin-right: $col-width;
     height: 40px;
 
     div.footer-copyright {
@@ -210,3 +214,11 @@ footer.site-footer {
         }
     }
 }
+
+/**
+ * DISQUS SECTION
+ */
+ div#disqus_thread {
+    margin-top: $spacing-unit;
+    margin-bottom: $spacing-unit;
+ }

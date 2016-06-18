@@ -5,76 +5,36 @@ permalink: /musings/
 weight: 4
 ---
 
-<section class="musings">
-  <div class="musings-nav">
-  </div>
-  <div class="most-recent">
-  </div>
-      <ul class="post-list">
-      
-        {% for post in site.posts limit:5 %}
-          <li class="list-item">
-            <span class="post-category">{{ post.categories[1] }}</span>
-            
-            <h2 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">
-              {{ post.title }}
-            </a></h2>
+<section class="most-recent-musing">
+{% for post in site.posts limit:1 %}
 
-            <p class="post-date">
-              {{ post.date | date: "%b %-d, %Y" }}
-            </p>
-            <div class="post-excerpt">
-              {{ post.excerpt }} 
-            </div>
-            
-            <p class="read-more-link">
-              <a href="{{ post.url | prepend: site.baseurl }}">
-                Read More &raquo;
-              </a>
-            </p>
-          </li>
-        {% endfor %}
-
-      </ul>
-  </div>
-</section>
-<!--
-<div class="blog">
-
-  <ul class="blog-listing">
-  
-    {% for post in site.posts limit:3 %}
-      
-      <li class="list-item">
-
-        <div>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-            {{ post.title }}
+  <article class="musing">
+    <header class="musing-header">
+      <nav class="musing-nav">
+        {% if post.previous.url %}
+          <a class="prev" href="{{ post.previous.url }}">
+            &laquo; {{ post.previous.title }}
           </a>
-        </div>
+        {% endif %}
+        {% if post.next.url %}
+          <a class="next" href="{{ post.next.url }}">
+            {{ post.next.title }} &raquo;
+          </a>
+        {% endif %}
+      </nav>
+    </header>
+    
+    <section class="musing-content" itemscope itemtype="http://schema.org/BlogPosting">
+      <h1 class="musing-title" itemprop="name headline">
+        {{ post.title }}
+      </h1>
+      <div itemprop="articleBody">
+        {{ post.content }}
+      </div>
+    </section>
 
-        <p class="post-meta">
-          {{ post.date | date: "%b %-d, %Y" }} | 
-          <a href="{{ post.url }}/#disqus_thread" data-disqus-identifier="{{ post.disqus_identifier }}"></a>
-        </p>
-        
-        <div class="post-excerpt">
-          {{ post.excerpt | remove: "<p>" | remove: "</p>"}} 
-          
-          <p class="read-more-link">
-            <a href="{{ post.url | prepend: site.baseurl }}">
-              Read More &raquo;
-            </a>
-          </p>
-        </div>
+    {% include disqus_comments.html %}
+  </article>
 
-      </li>
-    {% endfor %}
-
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+{% endfor %}
 </section>
--->
