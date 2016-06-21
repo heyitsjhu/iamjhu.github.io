@@ -106,20 +106,6 @@ div.quote {
   div.social-media-icons {
     align-self: flex-end;
   }
-
-  div.social-media-icons {
-        a {
-            margin-right: ($spacing-unit / 2);
-            
-            &:last-child {
-                margin-right: 0;
-            };
-
-            &:hover {
-                border-bottom: none;
-            };
-        }
-    }
 }
 
 /*************************************/

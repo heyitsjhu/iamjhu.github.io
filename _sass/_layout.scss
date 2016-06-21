@@ -13,6 +13,11 @@ header.site-header {
     // Positioning context for the mobile navigation icon: ;
     position: relative;
 
+    div.site-logo {
+      a:hover {
+          border: none;
+      }
+    }
     nav.site-nav {
       display: none;
       align-self: center;
@@ -172,6 +177,7 @@ header.musing-header {
  * SITE FOOTER
  */
 footer.site-footer {
+  justify-content: space-between;
   background-color: #035E7C;
   color: #FFF;
 
@@ -189,9 +195,14 @@ div#disqus_thread {
 }
 
 
+/*************************************/
+/*** *** *** MEDIA QUERIES *** *** ***/
+/*************************************/
 @include media-query($on-tablet) {
   header.site-header,
   footer.site-footer {
     padding: $spacing-unit * 2;
   }
+
+
 }

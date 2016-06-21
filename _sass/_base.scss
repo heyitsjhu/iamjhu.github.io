@@ -163,12 +163,30 @@ pre {
     flex-direction: column;
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
 .container {
     max-width: $content-width;
     margin-left: auto;
     margin-right: auto;
 }
 
+div.social-media-icons {
+    a {
+        margin-right: ($spacing-unit / 2);
+        
+        &:last-child {
+            margin-right: 0;
+        };
+
+        &:hover {
+            border-bottom: none;
+        };
+    }
+}
 /**
  * Clearfix
  */
@@ -181,7 +199,9 @@ pre {
     }
 }
 
-
+/*************************************/
+/*** *** *** MEDIA QUERIES *** *** ***/
+/*************************************/
 @include media-query($on-tablet) {
     body {
         font-size: $base-font-size * 1.125;
