@@ -1,8 +1,11 @@
-div.hero {
-  display: flex;
-  flex-direction: column; 
+div.hero, 
+div.mockups, 
+div.musings, 
+div.quote {
   padding: $spacing-unit;
-  background-color: #1B95BF;
+}
+
+div.hero {
   color: #fff;
   
   .thin {
@@ -13,7 +16,8 @@ div.hero {
     font-weight: 700;
   }
 
-  div#hero-hello, #hero-logo {
+  div#hero-hello, 
+  div#hero-logo {
     align-self: flex-end;
   }
 
@@ -23,54 +27,55 @@ div.hero {
 
   div#hero-logo {
     padding-right: $spacing-unit;
+
+    img {
+      width: 32px;
+    }
   }
 }
 
 div.mockups {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: $spacing-unit;
 }
 
 div.musings {
-  background-color: #1B95BF;
   color: #fff;
-  padding: $spacing-unit;
 
   h2 {
     text-align: center;
   }
 
-  .musing {
+  div.musing {
     display: flex;
     flex-direction: column;
 
-    .musing-title, .musing-content {
+    h3.musing-title, 
+    div.musing-content {
       width: 80%;
     }
-    div.musing-content, span.continue-reading {
+
+    div.musing-content, 
+    span.continue-reading {
       align-self: flex-end;
     }
   }
 }
 
 div.quote {
-  display: flex;
-  flex-direction: column;
-  padding: $spacing-unit;
-  
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+
   p {
     text-align: center;
   }
 
-  span.quoter, div.social-media-icons {
+  span.quoter, 
+  div.social-media-icons {
     align-self: flex-end;
   }
 
   div.social-media-icons {
-        font-size: $small-font-size;
-        
         a {
             margin-right: ($spacing-unit / 2);
             
@@ -79,4 +84,55 @@ div.quote {
             };
         }
     }
+}
+
+/*************************************/
+/*** *** *** MEDIA QUERIES *** *** ***/
+/*************************************/
+@include media-query($on-tablet) {
+  div.hero, 
+  div.mockups, 
+  div.musings, 
+  div.quote {
+    padding: $spacing-unit * 2;
+  }
+
+  div.hero { 
+    font-size: 2em;
+
+    div#hero-logo img {
+      width: 64px;
+    }
+  }
+
+  div.musings div.musing {
+    h3.musing-title, 
+    div.musing-content {
+      width: 70%;
+    }
+  }
+
+  div.quote {
+    width: 60%;
+
+    p {
+      align-self: center;
+    }
+  }
+}
+
+@include media-query($on-desktop) {
+  div.hero, 
+  div.mockups, 
+  div.musings, 
+  div.quote {
+    padding: $spacing-unit * 2.5;
+  }
+
+  div.musings div.musing {
+    h3.musing-title, 
+    div.musing-content {
+      width: 60%;
+    }
+  }
 }

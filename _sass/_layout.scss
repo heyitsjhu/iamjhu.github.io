@@ -1,28 +1,29 @@
+header.site-header,
+footer.site-footer {
+  padding: $spacing-unit;
+}
+
 /**
  * SITE HEADER
  */
 header.site-header {
     display: flex;
     justify-content: space-between;
-    margin-left: $spacing-unit;
-    margin-right: $spacing-unit;
-    padding-top: $spacing-unit;
-    padding-bottom: $spacing-unit;
 
     // Positioning context for the mobile navigation icon: ;
     position: relative;
 
     nav.site-nav {
       display: none;
-        align-self: center;
-        width: 300px;
+      align-self: center;
+      width: 300px;
 
-        ul {
-            display: flex;
-            justify-content: space-between;
-            margin: 0;
-            list-style: none;
-        }
+      ul {
+          display: flex;
+          justify-content: space-between;
+          margin: 0;
+          list-style: none;
+      }
 
 
 /*    .page-link {
@@ -178,7 +179,6 @@ header.musing-header {
  * SITE FOOTER
  */
 footer.site-footer {
-  padding: $spacing-unit;
   background-color: #035E7C;
   color: #FFF;
 
@@ -193,4 +193,12 @@ footer.site-footer {
 div#disqus_thread {
   margin-top: $spacing-unit;
   margin-bottom: $spacing-unit;
+}
+
+
+@include media-query($on-tablet) {
+  header.site-header,
+  footer.site-footer {
+    padding: $spacing-unit * 2;
+  }
 }

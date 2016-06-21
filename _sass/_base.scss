@@ -46,7 +46,6 @@ img {
 }
 
 
-
 /**
  * Figures
  */
@@ -78,22 +77,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2em;
 }
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 h3 {
-    font-size: 1.17rem;
+    font-size: 1.17em;
 }
 h4 {
-    font-size: 1.12rem;
+    font-size: 1.12em;
 }
 h5 {
-    font-size: 0.83rem;
+    font-size: 0.83em;
 }
 h6 {
-    font-size: 0.75rem;
+    font-size: 0.75em;
 }
 
 /**
@@ -116,7 +115,6 @@ blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
-    font-size: 16px;
     font-style: italic;
 
     > :last-child {
@@ -154,29 +152,20 @@ pre {
 /**
  * CUSTOM GLOBAL SETTINGS
  */
-.flex-column {
+.background {
+  background-color: #1B95BF;
+}
+
+.flex-col {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
-.wrapper {
-    padding-left: $col-width * 2;
-    padding-right: $col-width * 2;
-/*    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
+
+.container {
+    max-width: $content-width;
     margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-desktop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    }
-*/
+    margin-right: auto;
 }
-
 
 /**
  * Clearfix
@@ -187,5 +176,40 @@ pre {
         content: "";
         display: table;
         clear: both;
+    }
+}
+
+
+@include media-query($on-tablet) {
+    body {
+        font-size: $base-font-size * 1.125;
+        letter-spacing: $tablet-letter-spacing;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    p, blockquote, pre,
+    ul, ol, dl, figure,
+    %vertical-rhythm {
+        margin-bottom: $spacing-unit * 2;
+    }
+}
+
+@include media-query($on-desktop) {
+    body {
+        font-size: $base-font-size * 1.25;
+        letter-spacing: $desktop-letter-spacing;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    p, blockquote, pre,
+    ul, ol, dl, figure,
+    %vertical-rhythm {
+        margin-bottom: $spacing-unit * 2.5;
+    }
+}
+
+@include media-query($on-hd-screen) {
+    body {
+        font-size: $base-font-size * 1.375;
     }
 }
