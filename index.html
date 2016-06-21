@@ -33,13 +33,24 @@ layout: default
 
 <div class="background">
   <div class="musings container">
-    <h2>Musings</h2>
+    <h2>Latest Musing</h2>
+    {% for post in site.posts limit:1 %}
+
     <div class="musing">
-      <h3 class="musing-title">Curabitur lobortis varius neque 
-  sit amet luctus</h3>
-      <div class="musing-content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae est in odio rutrum volutpat. Morbi mi odio, sagittis ac augue eget, blandit laoreet mauris. Curabitur facilisis enim sem.</p></div>
-      <span class="continue-reading">continue reading...</span>
+      <h2 class="musing-title">
+        {{ post.title }}
+      </h2>
+      <div class="musing-content">
+        {{ post.excerpt }}
+      </div>
+      <span class="continue-reading">
+        <a href="{{ post.url }}">
+          continue reading...
+        </a>
+      </span>
     </div>
+
+    {% endfor %}
   </div>
 </div>
 
