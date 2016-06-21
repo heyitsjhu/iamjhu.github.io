@@ -15,7 +15,7 @@ dl, dd, ol, ul, figure {
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    letter-spacing: $desktop-letter-spacing;
+    letter-spacing: $mobile-letter-spacing;
     color: $text-color;
     background-color: $background-color; 
     -webkit-text-size-adjust: 100%;
@@ -74,7 +74,6 @@ ul, ol {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-family: $heading-font-family;
     font-weight: 700;
 }
 

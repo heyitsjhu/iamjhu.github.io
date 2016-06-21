@@ -3,41 +3,27 @@
  */
 header.site-header {
     display: flex;
-    margin-left: $col-width;
-    margin-right: $col-width;
-    margin-bottom: $spacing-unit;
-    min-height: 160px;
+    justify-content: space-between;
+    margin-left: $spacing-unit;
+    margin-right: $spacing-unit;
+    padding-top: $spacing-unit;
+    padding-bottom: $spacing-unit;
 
     // Positioning context for the mobile navigation icon: ;
     position: relative;
 
-    div.site-logo {
-        width: 102px;
-        height: 120px;
-        background-color: $brand-color;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-
-        .logo {
-            text-align: center;
-            padding-top: 60px;
-            color: $text-color;
-        }
-    }
-
     nav.site-nav {
+      display: none;
         align-self: center;
         width: 300px;
-        margin: 0 auto;
 
         ul {
             display: flex;
             justify-content: space-between;
-            align-items: center;
             margin: 0;
-            font-size: $small-font-size;
             list-style: none;
         }
+
 
 /*    .page-link {
         color: $text-color;
@@ -192,33 +178,19 @@ header.musing-header {
  * SITE FOOTER
  */
 footer.site-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: $col-width;
-    margin-right: $col-width;
-    height: 40px;
+  padding: $spacing-unit;
+  background-color: #035E7C;
+  color: #FFF;
 
-    div.footer-copyright {
-        font-size: $small-font-size;
-    }
-    div.social-media-icons {
-        font-size: $small-font-size;
-        
-        a {
-            margin-right: ($spacing-unit / 2);
-            
-            &:last-child {
-                margin-right: 0;
-            };
-        }
-    }
+  div.footer-copyright {
+    font-size: $small-font-size;
+  }
 }
 
 /**
  * DISQUS SECTION
  */
- div#disqus_thread {
-    margin-top: $spacing-unit;
-    margin-bottom: $spacing-unit;
- }
+div#disqus_thread {
+  margin-top: $spacing-unit;
+  margin-bottom: $spacing-unit;
+}
