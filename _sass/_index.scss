@@ -59,9 +59,14 @@ div.musings {
     display: flex;
     flex-direction: column;
 
-    h3.musing-title, 
+    h2.musing-title, 
     div.musing-content {
       width: 80%;
+    }
+
+    h2.musing-title {
+      text-align: initial;
+      align-self: flex-start;
     }
 
     div.musing-content, 
@@ -94,6 +99,10 @@ div.quote {
             
             &:last-child {
                 margin-right: 0;
+            };
+
+            &:hover {
+                border-bottom: none;
             };
         }
     }
