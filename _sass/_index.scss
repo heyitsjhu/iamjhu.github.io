@@ -43,6 +43,20 @@ div.hero {
 /*****************************************/
 div.mockups {
   align-items: center;
+  
+  div.mockup-showcase {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: $spacing-unit;
+
+    div.showcase-mockup,
+    div.showcase-markup {
+      width: 45%;
+      height: 600px;
+      border: 2px solid $secondary-color;
+    }
+  }
 }
 
 /*********************************************/
@@ -125,6 +139,20 @@ div.quote {
     div#hero-logo img {
       width: 64px;
     }
+
+    div#hero-prof {
+      padding-left: $spacing-unit * 2;
+    }
+
+    div#hero-logo {
+      padding-right: $spacing-unit * 2;
+    }
+  }
+
+  div.mockups {
+    div.mockup-showcase {
+      margin-bottom: $spacing-unit * 2;
+    }
   }
 
   div.musings div.musing {
@@ -149,6 +177,12 @@ div.quote {
   div.musings, 
   div.quote {
     padding: $spacing-unit * 2.5;
+  }
+
+  div.mockups {
+    div.mockup-showcase {
+      margin-bottom: $spacing-unit * 2.5;
+    }
   }
 
   div.musings div.musing {

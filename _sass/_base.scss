@@ -94,17 +94,20 @@ h6 {
     font-size: 0.75em;
 }
 
+
 /**
  * Links
  */
 a {
     color: $secondary-color;
     text-decoration: none;
+    border-bottom: 1px solid none;
 
     &:hover {
-        border-bottom: 2px solid $secondary-color;
+        border-bottom: 1px solid $secondary-color;
     };
 }
+
 
 /**
  * Blockquotes
@@ -121,6 +124,7 @@ blockquote {
 }
 
 /**
+
  * CODE FORMATTING
  */
 pre,
