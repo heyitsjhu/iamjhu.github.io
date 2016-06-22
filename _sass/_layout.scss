@@ -8,6 +8,8 @@ footer.site-footer {
  */
 header.site-header {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 
     // Positioning context for the mobile navigation icon: ;
@@ -19,9 +21,8 @@ header.site-header {
       }
     }
     nav.site-nav {
-      display: none;
-      align-self: center;
-      width: 300px;
+      padding-top: $spacing-unit;
+      width: 280px;
 
       ul {
           display: flex;
@@ -202,6 +203,16 @@ div#disqus_thread {
   header.site-header,
   footer.site-footer {
     padding: $spacing-unit * 2;
+  }
+
+  header.site-header {
+    flex-direction: row;
+    align-items: center;
+
+    nav.site-nav {
+      padding-top: 0;
+      width: 384px;
+    }
   }
 
 
