@@ -7,30 +7,10 @@ weight: 4
 
   {% for post in site.posts limit:1 %}
 
-    <header class="musing-header container">
-      <nav class="musing-nav">
-        {% if post.previous.url %}
-          <a class="prev" href="{{ post.previous.url }}">
-            &laquo; {{ post.previous.title }}
-          </a>
-        {% endif %}
-        {% if post.next.url %}
-          <a class="next" href="{{ post.next.url }}">
-            {{ post.next.title }} &raquo;
-          </a>
-        {% endif %}
-      </nav>
-    </header>
+    {% include musing-nav.html %}
 
-    <article class="musing container" itemscope itemtype="http://schema.org/BlogPosting">
-      <h1 class="musing-title" itemprop="name headline">
-        {{ post.title }}
-      </h1>
-      <div class="musing-content" itemprop="articleBody">
-        {{ post.content }}
-      </div>
-
-      {% include disqus_comments.html %}
-    </article>
-
+    {% include musing-article.html %}
+    
+    {% include disqus_comments.html %}
+    
   {% endfor %}

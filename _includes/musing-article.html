@@ -1,0 +1,23 @@
+<article class="musing container" itemscope itemtype="http://schema.org/BlogPosting">
+  
+  <h1 class="musing-title" itemprop="name headline">
+    {{ post.title }}
+  </h1>
+
+  <div class="musing-content" itemprop="articleBody">
+    {% if page.url == "/" %}
+      {{ post.excerpt }}
+    {% else %}
+      {{ post.content }}
+    {% endif %}
+  </div>
+
+  {% if page.url == "/" %}
+    <span class="continue-reading">
+      <a href="{{ post.url }}">
+        continue reading...
+      </a>
+    </span>
+  {% endif %}
+
+</article>

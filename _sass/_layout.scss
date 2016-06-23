@@ -121,35 +121,34 @@ section.quote {
 }
 
 /*************************************/
-/*** *** *** MUSINGS PAGE  *** *** ***/
+/*** **** *** MUSING NAV  *** **** ***/
 /*************************************/
-header.musing-header {
-    padding: $spacing-unit 0;
-
-    nav.musing-nav {
-        width: 100%;
-        font-size: $small-font-size;
-        overflow: auto;
-        a {
-            display: block;
-            max-width: 35%;
-        }
-        a.prev {
-            float: left;
-        }
-        a.next {
-            float: right;
-            text-align: right;
-        }
+nav.musing-nav {
+    width: 100%;
+    font-size: $small-font-size;
+    overflow: auto;
+    a {
+        display: block;
+        max-width: 35%;
+    }
+    a.prev {
+        float: left;
+    }
+    a.next {
+        float: right;
+        text-align: right;
     }
 }
 
+/*************************************/
+/*** ** *** MUSING ARTICLE  *** ** ***/
+/*************************************/
 article.musing {
     display: flex;
     flex-direction: column;
 
-    .musing-title, 
-    .musing-content {
+    h1.musing-title, 
+    div.musing-content {
       width: 80%;
     }
     
@@ -178,9 +177,9 @@ footer.site-footer {
   }
 }
 
-/**
- * DISQUS SECTION
- */
+/*************************************/
+/*** ** **  DISQUS COMMENTS  ** ** ***/
+/*************************************/
 div#disqus_thread {
   margin-top: $spacing-unit;
   margin-bottom: $spacing-unit;

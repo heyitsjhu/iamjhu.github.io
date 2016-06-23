@@ -35,21 +35,7 @@ layout: default
     <section class="latest-musing">
       <h2>Latest Musing</h2>
       {% for post in site.posts limit:1 %}
-
-      <article class="musing container" itemscope itemtype="http://schema.org/BlogPosting">
-          <h1 class="musing-title" itemprop="name headline">
-            {{ post.title }}
-          </h1>
-          <div class="musing-content" itemprop="articleBody">
-            {{ post.excerpt }}
-          </div>
-          <span class="continue-reading">
-          <a href="{{ post.url }}">
-            continue reading...
-          </a>
-        </span>
-      </article>
-
+        {% include musing-article.html %}
       {% endfor %}
     </section>
   </div>
