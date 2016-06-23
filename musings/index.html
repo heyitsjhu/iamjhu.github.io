@@ -5,11 +5,9 @@ permalink: /musings/
 weight: 4
 ---
 
-<section class="most-recent-musing">
-{% for post in site.posts limit:1 %}
+  {% for post in site.posts limit:1 %}
 
-  <article class="musing">
-    <header class="musing-header">
+    <header class="musing-header container">
       <nav class="musing-nav">
         {% if post.previous.url %}
           <a class="prev" href="{{ post.previous.url }}">
@@ -23,18 +21,16 @@ weight: 4
         {% endif %}
       </nav>
     </header>
-    
-    <section class="musing-content" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <article class="musing container" itemscope itemtype="http://schema.org/BlogPosting">
       <h1 class="musing-title" itemprop="name headline">
         {{ post.title }}
       </h1>
-      <div itemprop="articleBody">
+      <div class="musing-content" itemprop="articleBody">
         {{ post.content }}
       </div>
-    </section>
 
-    {% include disqus_comments.html %}
-  </article>
+      {% include disqus_comments.html %}
+    </article>
 
-{% endfor %}
-</section>
+  {% endfor %}

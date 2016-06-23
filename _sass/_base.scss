@@ -150,12 +150,22 @@ pre {
 }
 
 
-
-/**
- * CUSTOM GLOBAL SETTINGS
- */
+/*************************************/
+/*** ** CUSTOM GLOBAL SETTINGS  ** ***/
+/*************************************/
 .background {
   background-color: #1B95BF;
+  position: relative;
+}
+
+.background:before {
+    content: "";
+  background-color: #1B95BF;
+  position: absolute;
+  height: 100%;
+  width: 200vw;
+  left: -100vw;
+  z-index: -1;
 }
 
 .flex-col {

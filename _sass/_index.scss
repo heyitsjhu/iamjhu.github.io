@@ -1,7 +1,7 @@
-div.hero, 
-div.mockups, 
-div.musings, 
-div.quote {
+section.hero, 
+section.mockups, 
+section.musings, 
+section.quote {
   padding: $spacing-unit;
 }
 
@@ -9,7 +9,7 @@ div.quote {
 /************************************/
 /*** *** *** HERO SECTION *** *** ***/
 /************************************/
-div.hero {
+section.hero {
   color: #fff;
   
   .thin {
@@ -41,7 +41,7 @@ div.hero {
 /*****************************************/
 /*** *** *** MOCK UP SPOTLIGHT *** *** ***/
 /*****************************************/
-div.mockups {
+section.mockups {
   align-items: center;
   
   div.mockup-showcase {
@@ -62,38 +62,18 @@ div.mockups {
 /*********************************************/
 /*** *** *** LATEST MUSING SECTION *** *** ***/
 /*********************************************/
-div.musings {
+section.latest-musing {
   color: #fff;
 
   h2 {
     text-align: center;
-  }
-
-  div.musing {
-    display: flex;
-    flex-direction: column;
-
-    h2.musing-title, 
-    div.musing-content {
-      width: 80%;
-    }
-
-    h2.musing-title {
-      text-align: initial;
-      align-self: flex-start;
-    }
-
-    div.musing-content, 
-    span.continue-reading {
-      align-self: flex-end;
-    }
   }
 }
 
 /*************************************/
 /*** *** *** QUOTE SECTION *** *** ***/
 /*************************************/
-div.quote {
+section.quote {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -119,7 +99,7 @@ div.quote {
     padding: $spacing-unit * 2;
   }
 
-  div.hero { 
+  section.hero { 
     font-size: 2em;
 
     div#hero-logo img {
@@ -135,20 +115,20 @@ div.quote {
     }
   }
 
-  div.mockups {
+  section.mockups {
     div.mockup-showcase {
       margin-bottom: $spacing-unit * 2;
     }
   }
 
-  div.musings div.musing {
+  article.musing {
     h3.musing-title, 
     div.musing-content {
       width: 70%;
     }
   }
 
-  div.quote {
+  section.quote {
     width: 60%;
 
     p {
@@ -158,23 +138,16 @@ div.quote {
 }
 
 @include media-query($on-desktop) {
-  div.hero, 
-  div.mockups, 
-  div.musings, 
-  div.quote {
+  section.hero, 
+  section.mockups, 
+  section.musings, 
+  section.quote {
     padding: $spacing-unit * 2.5;
   }
 
-  div.mockups {
+  section.mockups {
     div.mockup-showcase {
       margin-bottom: $spacing-unit * 2.5;
-    }
-  }
-
-  div.musings div.musing {
-    h3.musing-title, 
-    div.musing-content {
-      width: 60%;
     }
   }
 }

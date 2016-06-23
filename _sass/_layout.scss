@@ -3,138 +3,128 @@ footer.site-footer {
   padding: $spacing-unit;
 }
 
-/**
- * SITE HEADER
- */
+/*************************************/
+/*** *** ***  SITE HEADER  *** *** ***/
+/*************************************/
 header.site-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
-    // Positioning context for the mobile navigation icon: ;
-    position: relative;
+    border-bottom: 1px solid $grey-color;
 
     nav.site-nav {
-      padding-top: $spacing-unit;
-      width: 280px;
+        padding-top: $spacing-unit;
+        width: 280px;
 
-      ul {
-          display: flex;
-          justify-content: space-between;
-          margin: 0;
-          list-style: none;
-      }
-
-
-/*    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-        font-size: 18px;
-        font-weight: bold;
-
-        // Gaps between nav items
-        padding: 12px 16px;
-        transition: 0.5s;
-
-        &:hover {
-            color: #f2f2f2;
-            background-color: $brand-color;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            list-style: none;
         }
     }
-        .page-link {
-            display: block;
-            padding: 5px 20px;
+}
 
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-        } */
+/*************************************/
+/*** *** ***   SITE INDEX  *** *** ***/
+/*************************************/
+
+section.hero, 
+section.mockups, 
+section.latest-musing, 
+section.quote {
+  padding: $spacing-unit;
+}
+
+
+/************************************/
+/*** *** *** HERO SECTION *** *** ***/
+/************************************/
+section.hero {
+  color: #fff;
+  
+  .thin {
+    font-weight: 100;
+  }
+
+  .bold {
+    font-weight: 700;
+  }
+
+  div#hero-hello, 
+  div#hero-logo {
+    align-self: flex-end;
+  }
+
+  div#hero-prof {
+    padding-left: $spacing-unit;
+  }
+
+  div#hero-logo {
+    padding-right: $spacing-unit;
+
+    img {
+      width: 32px;
     }
-}
-
-
-/**
- * MUSING INDEX PAGE
- */
-
-ul.post-list {
-  margin-left: 0;
-  list-style: none;
-
-  > li {
-    margin-top: 20px;
-    padding-bottom: $spacing-unit * 1.5;
-    border-bottom: 2px solid $brand-color;
-
-    &:last-child {
-      border-bottom: none;
-    };
-
-    @include media-query($on-tablet) {
-      margin-top: 40px;
-    }
-
-    @include media-query($on-desktop) {
-      margin-top: 50px;
-    }
   }
 }
 
-span.post-category {
-  color: $brand-color;
-  border: 3px solid $brand-color;
-  padding: 4px 8px;
-}
-
-.post-meta, .post-date {
-  font-size: $small-font-size;
-}
-
-.post-date {
-  display: none;
-}
-
-.post-title {
-  margin-top: 5px;
-
-  a {
-    color: $text-color;
-  }
-}
-
-.post-excerpt {
-  a {
-    font-weight: 400;
-  }
-}
-
-.read-more-link {
-  margin-top: 10px;
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-@include media-query($on-tablet) {
-  .post-date {
-    display: block;
-  }
-
-  .post-title {
-    margin-top: 10px;
-    margin-bottom: 0;
-  }
-
-  .read-more-link {
-    margin-top: 20px;
-  }
-}
-
-/**
- * MUSINGS (POSTS)
- */
-header.musing-header {
+/*****************************************/
+/*** *** *** MOCK UP SPOTLIGHT *** *** ***/
+/*****************************************/
+section.mockups {
+  align-items: center;
+  
+  div.mockup-showcase {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     margin-bottom: $spacing-unit;
+
+    div.showcase-mockup,
+    div.showcase-markup {
+      width: 45%;
+      height: 600px;
+      border: 2px solid $secondary-color;
+    }
+  }
+}
+
+/*********************************************/
+/*** *** *** LATEST MUSING SECTION *** *** ***/
+/*********************************************/
+section.latest-musing {
+  color: #fff;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+/*************************************/
+/*** *** *** QUOTE SECTION *** *** ***/
+/*************************************/
+section.quote {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+
+  p {
+    text-align: center;
+  }
+
+  span.quoter, 
+  div.social-media-icons {
+    align-self: flex-end;
+  }
+}
+
+/*************************************/
+/*** *** *** MUSINGS PAGE  *** *** ***/
+/*************************************/
+header.musing-header {
+    padding: $spacing-unit 0;
 
     nav.musing-nav {
         width: 100%;
@@ -154,24 +144,30 @@ header.musing-header {
     }
 }
 
-.tags {
-  margin-bottom: $spacing-unit * 2;
-  border-bottom: 3px solid $brand-color;
+article.musing {
+    display: flex;
+    flex-direction: column;
+
+    .musing-title, 
+    .musing-content {
+      width: 80%;
+    }
+    
+    .musing-title {
+      text-align: initial;
+      align-self: flex-start;
+    }
+
+    div.musing-content, 
+    span.continue-reading {
+      align-self: flex-end;
+    }
 }
 
-.post-tags {
-  font-size: $small-font-size;
-    margin: 0 2px;
-    padding: 2px 5px;
-}
 
-.post-tag-icon {
-    width: 25px;
-}
-
-/**
- * SITE FOOTER
- */
+/*************************************/
+/*** *** ***  SITE FOOTER  *** *** ***/
+/*************************************/
 footer.site-footer {
   justify-content: space-between;
   background-color: #035E7C;
@@ -210,5 +206,62 @@ div#disqus_thread {
     }
   }
 
+  div.hero, 
+  div.mockups, 
+  div.latest-musing, 
+  div.quote {
+    padding: $spacing-unit * 2;
+  }
 
+  section.hero { 
+    font-size: 2em;
+
+    div#hero-logo img {
+      width: 64px;
+    }
+
+    div#hero-prof {
+      padding-left: $spacing-unit * 2;
+    }
+
+    div#hero-logo {
+      padding-right: $spacing-unit * 2;
+    }
+  }
+
+  section.mockups {
+    div.mockup-showcase {
+      margin-bottom: $spacing-unit * 2;
+    }
+  }
+
+  article.musing {
+    h3.musing-title, 
+    div.musing-content {
+      width: 70%;
+    }
+  }
+
+  section.quote {
+    width: 60%;
+
+    p {
+      align-self: center;
+    }
+  }
+}
+
+@include media-query($on-desktop) {
+  section.hero, 
+  section.mockups, 
+  section.latest-musing, 
+  section.quote {
+    padding: $spacing-unit * 2.5;
+  }
+
+  section.mockups {
+    div.mockup-showcase {
+      margin-bottom: $spacing-unit * 2.5;
+    }
+  }
 }
