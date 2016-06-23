@@ -27,8 +27,11 @@ $spacing-unit:      20px;
 
 $text-color:       #202020;
 $background-color: #FFF;
-$brand-color:      #1B95BF;
-$secondary-color:  #FFBC1C;
+$brand-color:      #1B95BF;     // Blue
+
+$secondary-color:  #FFBC1C;     // Orange
+$secondary-color-dark: darken($secondary-color, 10%);
+
 
 $grey-color:       #B6B6B6;
 $grey-color-light: lighten($grey-color, 40%);

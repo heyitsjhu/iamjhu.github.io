@@ -101,10 +101,10 @@ h6 {
 a {
     color: $secondary-color;
     text-decoration: none;
-    border-bottom: 1px solid none;
+    font-weight: 600;
 
     &:hover {
-        border-bottom: 1px solid $secondary-color;
+        color: $secondary-color-dark;
     };
 }
 
@@ -123,8 +123,8 @@ blockquote {
     }
 }
 
-/**
 
+/**
  * CODE FORMATTING
  */
 pre,
@@ -187,6 +187,8 @@ div.social-media-icons {
         };
     }
 }
+
+
 /**
  * Clearfix
  */
