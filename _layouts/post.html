@@ -1,30 +1,9 @@
 ---
 layout: default
 ---
-<article class="musing container">
-  <header class="musing-header">
-    <nav class="musing-nav">
-      {% if page.previous.url %}
-        <a class="prev" href="{{ page.previous.url }}">
-          &laquo; {{ page.previous.title }}
-        </a>
-      {% endif %}
-      {% if page.next.url %}
-        <a class="next" href="{{ page.next.url }}">
-          {{ page.next.title }} &raquo;
-        </a>
-      {% endif %}
-    </nav>
-  </header>
 
-  <section class="musing-content" itemscope itemtype="http://schema.org/BlogPosting">
-    <h1 class="musing-title" itemprop="name headline">
-      {{ page.title }}
-    </h1>
-    <div itemprop="articleBody">
-      {{ content }}
-    </div>
-  </section>
+  {% include musing-article.html %}
 
-    {% include disqus_comments.html %}
-</article>
+  {% include musing-nav.html %}
+
+  {% include disqus_comments.html %}

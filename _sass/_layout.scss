@@ -57,7 +57,7 @@ header.site-header {
 /*** *** *** HERO SECTION *** *** ***/
 /************************************/
 section.hero {
-  color: #fff;
+  color: $grey-color-light;
 
   div#hero-name,
   div#hero-dev {
@@ -80,19 +80,19 @@ section.hero {
 /*** *** *** MOCK UP SPOTLIGHT *** *** ***/
 /*****************************************/
 section.mockups {
-  align-items: center;
-  
-  div.mockup-showcase {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    
+    div.mockup-showcase {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
 
-    div.showcase-mockup,
-    div.showcase-markup {
-      width: 45%;
-      height: 600px;
-      border: 2px solid $secondary-color;
-    }
+      div.showcase-mockup,
+      div.showcase-markup {
+          width: 45%;
+          height: 600px;
+          border: 2px solid $secondary-color;
+      }
   }
 }
 
@@ -101,11 +101,12 @@ section.mockups {
 /*** *** *** LATEST MUSING SECTION *** *** ***/
 /*********************************************/
 section.latest-musing {
-  color: #fff;
+    color: $grey-color-light;
 
-  h2 {
-    text-align: center;
-  }
+    h2 {
+        margin-bottom: 0;
+        text-align: center;
+    }
 }
 
 
@@ -113,18 +114,18 @@ section.latest-musing {
 /*** *** *** QUOTE SECTION *** *** ***/
 /*************************************/
 section.quote {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 
-  p {
-    text-align: center;
-  }
+    p {
+        text-align: center;
+    }
 
-  span.quoter, 
-  div.social-media-icons {
-    align-self: flex-end;
-  }
+    span.quoter, 
+    div.social-media-icons {
+        align-self: flex-end;
+    }
 }
 
 
@@ -156,8 +157,13 @@ nav.musing-nav {
 article.musing {
     display: flex;
     flex-direction: column;
+    color: $grey-color-light;
 
-    h1.musing-title, 
+    
+    h1.musing-title {
+      padding-top: $spacing-unit;
+      width: 80%;
+    }
     div.musing-content {
       width: 80%;
     }
@@ -195,7 +201,7 @@ footer.site-footer {
   flex-direction: column;
   align-items: center;
   background-color: #035E7C;
-  color: #FFF;
+  color: $grey-color-light;
 
   div.footer-copyright {
     font-size: $small-font-size;
@@ -253,10 +259,12 @@ footer.site-footer {
   }
 
   article.musing {
-    h1.musing-title, 
-    div.musing-content {
-      width: 75%;
+    h1.musing-title {
+      padding-top: $spacing-unit * 2;
     }
+  }
+  nav.musing-nav {
+    font-size: $small-font-size;
   }
 
   section.quote {
@@ -289,9 +297,8 @@ footer.site-footer {
     }
 
     article.musing {
-        h1.musing-title, 
-        div.musing-content {
-            width: 80%;
+        h1.musing-title {
+            padding-top: $spacing-unit * 2.5;
         }
     }
 }

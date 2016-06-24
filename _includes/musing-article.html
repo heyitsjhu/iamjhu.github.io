@@ -1,14 +1,22 @@
 <article class="musing background" itemscope itemtype="http://schema.org/BlogPosting">
   
   <h1 class="musing-title" itemprop="name headline">
-    {{ post.title }}
+    {% if page.url == "/" %}
+      {{ post.title }}
+    {% elsif page.url == "/musings/" %}
+      {{ post.title }}
+    {% else %}
+      {{ page.title }}
+    {% endif %}
   </h1>
 
   <div class="musing-content" itemprop="articleBody">
     {% if page.url == "/" %}
       {{ post.excerpt }}
-    {% else %}
+    {% elsif page.url == "/musings/" %}
       {{ post.content }}
+    {% else %}
+      {{ content }}
     {% endif %}
   </div>
 
