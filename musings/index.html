@@ -7,9 +7,9 @@ weight: 4
 
   {% for post in site.posts limit:1 %}
 
-    {% include musing-nav.html %}
-
     {% include musing-article.html %}
+    
+    {% include musing-nav.html %}
     
     {% include disqus_comments.html %}
     

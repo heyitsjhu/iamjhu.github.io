@@ -153,12 +153,14 @@ pre {
 /*** ** CUSTOM GLOBAL SETTINGS  ** ***/
 /*************************************/
 .background {
-  background-color: #1B95BF;
-  position: relative;
+    background: url("../assets/bg/bg-texture.png") 100% 100%;
+    background-color: #1B95BF;
+    position: relative;
 }
 
 .background:before {
     content: "";
+    background: url("../assets/bg/bg-texture.png") 100% 100%;
   background-color: #1B95BF;
   position: absolute;
   height: 100%;
@@ -177,6 +179,23 @@ pre {
     flex-direction: row;
 }
 
+.thin {
+    font-weight: 100;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.btn {
+    padding: 5px 20px;
+    border: 2px solid $secondary-color;
+
+    &:active {
+        background-color: $secondary-color;
+        color: #fff;
+    };
+}
 
 /**
  * Clearfix

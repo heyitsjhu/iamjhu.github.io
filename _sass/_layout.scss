@@ -9,11 +9,11 @@ section.hero,
 section.mockups,
 section.latest-musing,
 section.quote,
-nav.musing-nav,
-div#disqus_thread {
+nav.musing-nav {
     padding-top: $spacing-unit;
     padding-bottom: $spacing-unit;
 }
+div#disqus_thread,
 div.mockup-showcase {
     padding-bottom: $spacing-unit;
 }
@@ -58,27 +58,17 @@ header.site-header {
 /************************************/
 section.hero {
   color: #fff;
-  
-  .thin {
-    font-weight: 100;
-  }
 
-  .bold {
-    font-weight: 700;
-  }
-
-  div#hero-hello, 
-  div#hero-logo {
+  div#hero-name,
+  div#hero-dev {
     align-self: flex-end;
   }
 
-  div#hero-prof {
-    padding-left: $spacing-unit;
+  div#hero-logo {
+    align-self: center;
   }
 
   div#hero-logo {
-    padding-right: $spacing-unit;
-
     img {
       width: 32px;
     }
@@ -225,11 +215,11 @@ footer.site-footer {
   section.mockups,
   section.latest-musing,
   section.quote,
-  nav.musing-nav,
-  div#disqus_thread {
+  nav.musing-nav {
       padding-top: $spacing-unit * 2;
       padding-bottom: $spacing-unit * 2;
   }
+  div#disqus_thread
   div.mockup-showcase {
       padding-bottom: $spacing-unit * 2;
   }
@@ -260,14 +250,6 @@ footer.site-footer {
     div#hero-logo img {
       width: 64px;
     }
-
-    div#hero-prof {
-      padding-left: $spacing-unit * 2;
-    }
-
-    div#hero-logo {
-      padding-right: $spacing-unit * 2;
-    }
   }
 
   article.musing {
@@ -291,13 +273,19 @@ footer.site-footer {
     section.mockups,
     section.latest-musing,
     section.quote,
-    nav.musing-nav,
-    div#disqus_thread {
+    nav.musing-nav {
         padding-top: $spacing-unit * 2.5;
         padding-bottom: $spacing-unit * 2.5;
     }
+    div#disqus_thread,
     div.mockup-showcase {
         padding-bottom: $spacing-unit * 2.5;
+    }
+
+    header.site-header {
+      nav.site-nav {
+        font-weight: 600;
+      }
     }
 
     article.musing {
