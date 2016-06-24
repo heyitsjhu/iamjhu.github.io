@@ -176,7 +176,9 @@ article.musing {
 /*** *** ***  SITE FOOTER  *** *** ***/
 /*************************************/
 footer.site-footer {
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #035E7C;
   color: #FFF;
 
@@ -211,6 +213,11 @@ div#disqus_thread {
       padding-top: 0;
       width: 400px;
     }
+  }
+
+  footer.site-footer {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   div.hero, 
