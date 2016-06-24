@@ -1,6 +1,22 @@
+/*************************************/
+/*** ***  CONTAINER  PADDINGS  *** ***/
+/*************************************/
 header.site-header,
 footer.site-footer {
-  padding: $spacing-unit;
+   padding: $spacing-unit;
+}
+section.hero, 
+section.mockups,
+section.latest-musing,
+section.quote {
+    padding-top: $spacing-unit;
+    padding-bottom: $spacing-unit;
+}
+.main-content {
+    max-width: $content-width;
+    margin: 0 auto;
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
 }
 
 /*************************************/
@@ -29,14 +45,6 @@ header.site-header {
 /*************************************/
 /*** *** ***   SITE INDEX  *** *** ***/
 /*************************************/
-
-section.hero, 
-section.mockups, 
-section.latest-musing, 
-section.quote {
-  padding: $spacing-unit;
-}
-
 
 /************************************/
 /*** *** *** HERO SECTION *** *** ***/
@@ -235,7 +243,7 @@ div#disqus_thread {
   }
 
   article.musing {
-    h3.musing-title, 
+    h1.musing-title, 
     div.musing-content {
       width: 70%;
     }
