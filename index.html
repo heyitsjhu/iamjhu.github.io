@@ -39,14 +39,15 @@ layout: default
     <a href="/portfolio/" class="btn">See More</a>
   </section>
 
-  <div class="background">
     <section class="latest-musing">
+      <div class="background">
       <h2>Latest Musing</h2>
       {% for post in site.posts limit:1 %}
         {% include musing-article.html %}
       {% endfor %}
+      </div>
     </section>
-  </div>
+
   
   <section class="quote flex-col">
     {% include quote.html %}

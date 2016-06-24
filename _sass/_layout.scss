@@ -154,28 +154,30 @@ nav.musing-nav {
 }
 
 
-/*************************************/
-/*** ** *** MUSING ARTICLE  *** ** ***/
-/*************************************/
+/***************************************/
+/*** ** *** PAGES and MUSINGS *** ** ***/
+/***************************************/
+
+section.about,
 article.musing {
     display: flex;
     flex-direction: column;
     color: $grey-color-light;
 
     
-    h1.musing-title {
+    h1 {
       padding-top: $spacing-unit;
       width: 80%;
     }
-    div.musing-content {
+    div {
       width: 80%;
     }
-    
+    .page-title,
     .musing-title {
       align-self: flex-start;
     }
 
-    div.musing-content, 
+    div.content, 
     span.continue-reading {
       align-self: flex-end;
     }
@@ -261,9 +263,9 @@ footer.site-footer {
       width: 64px;
     }
   }
-
+  section.about,
   article.musing {
-    h1.musing-title {
+    h1 {
       padding-top: $spacing-unit * 2;
     }
   }
@@ -300,9 +302,9 @@ footer.site-footer {
         font-weight: 600;
       }
     }
-
+    section.about,
     article.musing {
-        h1.musing-title {
+        h1 {
             padding-top: $spacing-unit * 2.5;
         }
     }
