@@ -58,6 +58,7 @@ header.site-header {
 /************************************/
 section.hero {
   color: $grey-color-light;
+  font-size: 5vw;
 
   div#hero-name,
   div#hero-dev {
@@ -66,9 +67,7 @@ section.hero {
 
   div#hero-logo {
     align-self: center;
-  }
-
-  div#hero-logo {
+    
     img {
       width: 32px;
     }
@@ -114,12 +113,11 @@ section.latest-musing {
 /*** *** *** QUOTE SECTION *** *** ***/
 /*************************************/
 section.quote {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-
+    margin: 0 auto;
+    
     p {
         text-align: center;
+        font-size: $small-font-size;
     }
 
     span.quoter, 
@@ -263,6 +261,7 @@ footer.site-footer {
       padding-top: $spacing-unit * 2;
     }
   }
+  
   nav.musing-nav {
     font-size: $small-font-size;
   }
@@ -271,7 +270,7 @@ footer.site-footer {
     width: 60%;
 
     p {
-      align-self: center;
+      font-size: $base-font-size;
     }
   }
 }

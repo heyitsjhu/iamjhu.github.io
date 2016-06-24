@@ -3,8 +3,8 @@
  */
 .highlight {
     width: 100%;
-    background: $grey-color;
-    border-radius: 5px;
+    background: $grey-color-light;
+    border-radius: 10px;
     @extend %vertical-rhythm;
 
     pre:first-child {
