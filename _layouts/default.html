@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html>
-
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-        {{ content }}
-    </div>
-
-    {% include footer.html %}
-
-    {% include twitter_follow.html %}
-
-    <script id="dsq-count-scr" src="//iamjhu.disqus.com/count.js" async></script>
-  </body>
-
+{% include head.html %}
+<body>
+  {% include header.html %}
+  <main id="main-content">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  {% include js_scripts.html %}
+</body>
 </html>

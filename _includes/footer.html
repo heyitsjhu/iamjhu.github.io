@@ -1,11 +1,11 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-    <div class="footer-copyright">
-      <span>
-        {{ site.copyright }}
-      </span>
-    </div>
+<footer id="site-footer">
+  <div class="footer-copyright">
+    <span>
+      {{ site.copyright }}
+    </span>
   </div>
 
+  {% if page.url != "/" %}
+    {% include social-media.html %}
+  {% endif %}
 </footer>

@@ -6,13 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: iamjhu
+title: Web Developer and Designer | Johnny Hu
 owner: Johnny Hu
 email: jgeehen.hu@gmail.com
 copyright: "&copy; 2016 iamjhu. All rights reserved."
 description: > # this means to ignore newlines until "baseurl:"
-  Failures. Triumphs. And a lot of caffeine.
-  This is my personal journey and dive into web development and applications.
+  Failures. Triumphs. And a lot of caffeine. Hi there—I'm Johnny. I design, markup and build web applications. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.iamjhu.com" # the base hostname & protocol for your site
 linkedin_username: jgeehenhu
@@ -36,6 +35,5 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "iamjhu"
-      tags: ["ruby", "coding", "programming", "tech"]
+      author: "Johnny"
 

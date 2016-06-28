@@ -1,0 +1,29 @@
+<header id="musing-header">
+  <h1 class="musing-title" itemprop="name headline">
+    {% if page.url == "/" %}
+      {{ post.title }}
+    {% elsif page.url == "/musings/" %}
+      {{ post.title }}
+    {% else %}
+      {{ page.title }}
+    {% endif %}
+  </h1>
+</header>
+
+<section class="content musing-content" itemprop="articleBody">
+  {% if page.url == "/" %}
+    {{ post.excerpt }}
+  {% elsif page.url == "/musings/" %}
+    {{ post.content }}
+  {% else %}
+    {{ content }}
+  {% endif %}
+</section>
+
+{% if page.url == "/" %}
+  <span class="continue-reading">
+    <a href="{{ post.url }}">
+      continue reading...
+    </a>
+  </span>
+{% endif %}

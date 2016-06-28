@@ -3,47 +3,54 @@
 ---
 @charset "utf-8";
 
+// Grid Values
+$scol-width: 7.23333%;
+$margin-width: 1.2%;
+$col-width: 8.43333%;
+
 // Our variables
-$base-font-family: "Raleway", Helvetica, sans-serif;
-$base-font-size:   100%;
+$base-font-family: "Advent Pro", sans-serif;
+$base-font-size: 100%;
 $base-font-weight: 400;
-$base-line-height: 1.6;
+$base-line-height: 1.8;
 
-$small-font-size:  $base-font-size * 0.875;
-$smaller-font-size: $base-font-size * 0.75;
+$small-font-size:  0.875em;
+$smaller-font-size: 0.75em;
 
-$heading-font-family: "Montserrat", Helvetica, sans-serif;
+$heading-font-family: "PT Serif", serif;
 
-$mobile-letter-spacing: 0.4px;
-$tablet-letter-spacing: 0.6px;
-$desktop-letter-spacing: 0.8px;
+$mobile-letter-spacing: 1px;
+$tablet-letter-spacing: 2px;
+$desktop-letter-spacing: 3px;
 
-$spacing-unit:     20px;
+$spacing-unit:      20px;
 
-$text-color:       #363030;
-$background-color: #FAFAFA;
-$brand-color:      #7A509F;
-$secondary-color:  #4D157E;
+$text-color:       #202020;
+$background-color: #FFF;
+$brand-color:      #1B95BF;     // Blue
 
-$grey-color:       #EFEFEF;
+$secondary-color:  #FFBC1C;     // Orange
+$secondary-color-dark: darken($secondary-color, 10%);
+
+
+$grey-color:       #B6B6B6;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 
 // Width of the content area
-$content-width:    850px;
+$content-width:     900px;
 
-$on-tablet:        768px;
+$on-tablet:         768px;
 $on-desktop:        1024px;
-$on-hd-screen:     1400px;
-$show-twitter:       1200px;
+$on-hd-screen:      1400px;
 
 
 // Use media queries like this:
 // @include media-query($on-tablet) {
 //     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
+//         padding-right: $spacing-unit;
+//         padding-left: $spacing-unit;
 //     }
 // }
 @mixin media-query($device) {
@@ -56,6 +63,5 @@ $show-twitter:       1200px;
 @import
         "base",
         "layout",
-        "syntax-highlighting",
-        "index"
+        "syntax-highlighting"
 ;

@@ -2,69 +2,53 @@
 layout: default
 ---
 
-<section class="main">
+<div class="background">
+  <section class="hero flex-col">
 
-  <div class="banner">
-    <div class="wrapper">
-      <p>Failures. Triumphs. And a lot of caffeine. <br />
-         This is my personal journey and dive into web development and applications.
-      </p>
-      
-      <div class="social-media-icons">
-        <a href="http://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
-          <i class="fa fa-linkedin fa-lg"></i>
-        </a>
-        <a href="http://www.twitter.com/{{ site.twitter_username }}">
-          <i class="fa fa-twitter fa-lg"></i>
-        </a>
-        <a href="http://www.facebook.com/{{ site.facebook_username }}" target="_blank">
-          <i class="fa fa-facebook fa-lg"></i>
-        </a>
-        <a href="http://www.instagram.com/{{ site.instagram_username }}" target="_blank">
-          <i class="fa fa-instagram fa-lg"></i>
-        </a>
-        <a href="http://www.github.com/{{ site.github_username }}" target="_blank">
-          <i class="fa fa-github fa-lg"></i>
-        </a>
-        <a href="http://www.behance.com/{{ site.behance_username }}" target="_blank">
-          <i class="fa fa-behance fa-lg"></i>
-        </a>
-        <a href="http://www.dribbble.com/{{ site.dribbble_username }}" target="_blank">
-          <i class="fa fa-dribbble fa-lg"></i>
-        </a>
-      </div>
+    <div id="hero-require">
+      <p class="bold"><span class="thin">require</span> 'caffeine'</p>
     </div>
-  </div>
 
-  <div class="wrapper">
-    <div class="blog-listing">
-      <ul class="post-list">
-      
-        {% for post in site.posts limit:5 %}
-          <li class="list-item">
-            <span class="post-category">{{ post.categories[1] }}</span>
-            
-            <h2 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">
-              {{ post.title }}
-            </a></h2>
+    <div id="hero-name">
+      <p class="bold"><span class="thin">name = </span> 'Johnny'</p>
+    </div>
 
-            <p class="post-date">
-              {{ post.date | date: "%b %-d, %Y" }}
-            </p>
-            <div class="post-excerpt">
-              {{ post.excerpt }} 
-            </div>
-            
-            <p class="read-more-link">
-              <a href="{{ post.url | prepend: site.baseurl }}">
-                Read More &raquo;
-              </a>
-            </p>
-          </li>
-        {% endfor %}
+    <div id="hero-hello">
+      <p class="bold"><span class="thin">puts</span> 'Hello.'</p>
+    </div>
 
-      </ul>
-  </div>
+    <div id="hero-dev">
+      <p class="bold"><span class="thin">i.am_a</span> Developer, Designer</p>
+    </div>
+
+    <div id="hero-logo">
+      <img src="/assets/logos/logo-white.svg">
+    </div>
+  </section>
 </div>
 
+<section class="mockups flex-col">
+  <h2>Mockups to Markups</h2>
+  <div class="mockup-showcase">
+    <div class="showcase-mockup">
+    </div>
+    <div class="showcase-markup">
+    </div>
+  </div>
+  <a href="/portfolio/" class="btn">See More</a>
+</section>
+
+<div class="background">
+  <section class="latest-musing">
+    <h2>Latest Musing</h2>
+    {% for post in site.posts limit:1 %}
+      <article class="musing background" itemscope itemtype="http://schema.org/BlogPosting">
+        {% include musing-article.html %}
+      </article>
+    {% endfor %}
+  </section>
+</div>
+
+<section class="quote flex-col">
+  {% include quote.html %}
 </section>
