@@ -1,4 +1,4 @@
-<header class="site-header">
+<header id="site-header">
   <div class="site-logo">
     <a href="{{ site.baseurl }}/">
       <img src="/assets/logos/logo.svg">
@@ -8,13 +8,13 @@
     {% assign pages = site.pages | sort:"weight" %}
     <ul>
       {% for page in pages %}
-        {% if page.title %}
-          <li>
-            <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
-              {{ page.title }}
-            </a>
-          </li>
-        {% endif %}
+      {% if page.title %}
+      <li>
+        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
+          {{ page.title }}
+        </a>
+      </li>
+      {% endif %}
       {% endfor %}
     </ul>
   </nav>

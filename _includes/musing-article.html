@@ -1,5 +1,4 @@
-<article class="musing background" itemscope itemtype="http://schema.org/BlogPosting">
-  
+<header id="musing-header">
   <h1 class="musing-title" itemprop="name headline">
     {% if page.url == "/" %}
       {{ post.title }}
@@ -9,23 +8,22 @@
       {{ page.title }}
     {% endif %}
   </h1>
+</header>
 
-  <div class="content musing-content" itemprop="articleBody">
-    {% if page.url == "/" %}
-      {{ post.excerpt }}
-    {% elsif page.url == "/musings/" %}
-      {{ post.content }}
-    {% else %}
-      {{ content }}
-    {% endif %}
-  </div>
-
+<section class="content musing-content" itemprop="articleBody">
   {% if page.url == "/" %}
-    <span class="continue-reading">
-      <a href="{{ post.url }}">
-        continue reading...
-      </a>
-    </span>
+    {{ post.excerpt }}
+  {% elsif page.url == "/musings/" %}
+    {{ post.content }}
+  {% else %}
+    {{ content }}
   {% endif %}
+</section>
 
-</article>
+{% if page.url == "/" %}
+  <span class="continue-reading">
+    <a href="{{ post.url }}">
+      continue reading...
+    </a>
+  </span>
+{% endif %}

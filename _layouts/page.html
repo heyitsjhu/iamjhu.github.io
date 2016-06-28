@@ -3,5 +3,11 @@ layout: default
 ---
 
 <div class="page">
-  {{ content }}
+  {% if page.url == "/musings/" %}
+    <article class="musing background" itemscope itemtype="http://schema.org/BlogPosting">
+      {{ content }}
+    </article>
+  {% else %}
+    {{ content }}
+  {% endif %}
 </div>
