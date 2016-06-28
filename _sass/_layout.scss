@@ -1,5 +1,5 @@
 /**
- *  CONTAINER  PADDINGS
+ *  CONTAINER PADDINGS
  */
 header#site-header,
 footer#site-footer {
@@ -27,7 +27,7 @@ div.mockup-showcase {
 
 
 
-/***
+/**
  * SITE HEADER
  */
  header#site-header {
@@ -161,10 +161,11 @@ nav.musing-nav {
 }
 
 
+
+
 /**
  * PAGES and MUSINGS
  */
-
 section.about,
 section.contact,
 article.musing {
@@ -177,7 +178,7 @@ article.musing {
     padding-top: $spacing-unit;
     width: 80%;
   }
-  section.content {
+  .content {
     width: 80%;
   }
   h1.page-title,
@@ -185,7 +186,7 @@ article.musing {
     align-self: flex-start;
   }
 
-  section.content,
+  .content,
   span.continue-reading {
     align-self: flex-end;
   }
