@@ -11,7 +11,7 @@ owner: Johnny Hu
 email: jgeehen.hu@gmail.com
 copyright: "&copy; 2016 iamjhu. All rights reserved."
 description: > # this means to ignore newlines until "baseurl:"
-  Failures. Triumphs. And a lot of caffeine. Hi there—I'm Johnny. I design, markup and build web applications. 
+  Failures. Triumphs. And a lot of caffeine. Hi there—I'm Johnny. I design, markup and build web applications.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.iamjhu.com" # the base hostname & protocol for your site
 linkedin_username: jgeehenhu
@@ -36,4 +36,5 @@ defaults:
     values:
       layout: "post"
       author: "Johnny"
+      category: musings
 
