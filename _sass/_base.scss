@@ -18,7 +18,7 @@ body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   letter-spacing: $mobile-letter-spacing;
   color: $text-color;
-  background-color: $background-color; 
+  background-color: $background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -180,30 +180,8 @@ pre {
 /*************************************/
 /*** ** CUSTOM GLOBAL SETTINGS  ** ***/
 /*************************************/
-.background {
-  background: url("../assets/bg/bg-texture.png") 100% 100%;
-  background-color: #1B95BF;
-  position: relative;
-}
-
-.background:before {
-  content: "";
-  background: url("../assets/bg/bg-texture.png") 100% 100%;
-  background-color: #1B95BF;
-  position: absolute;
-  height: 100%;
-  width: 200vw;
-  left: -100vw;
-  z-index: -1;
-}
-
 .container {
   overflow-x: hidden;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
 }
 
 .flex-row {

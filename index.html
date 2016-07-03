@@ -2,7 +2,6 @@
 layout: default
 ---
 
-<div class="background">
   <section class="hero flex-col">
 
     <div id="hero-require">
@@ -22,7 +21,6 @@ layout: default
     </div>
     
   </section>
-</div>
 
 <section class="mockups flex-col">
   <h2>Mockups to Markups</h2>
@@ -35,16 +33,14 @@ layout: default
   <a href="/portfolio/" class="btn">See More</a>
 </section>
 
-<div class="background">
   <section class="latest-musing">
     <h2>Latest Musing</h2>
     {% for post in site.posts limit:1 %}
-      <article class="musing background" itemscope itemtype="http://schema.org/BlogPosting">
+      <article class="musing" itemscope itemtype="http://schema.org/BlogPosting">
         {% include musing-article.html %}
       </article>
     {% endfor %}
   </section>
-</div>
 
 <section class="quote flex-col">
   {% include quote.html %}

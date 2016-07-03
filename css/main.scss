@@ -3,11 +3,6 @@
 ---
 @charset "utf-8";
 
-// Grid Values
-$scol-width: 7.23333%;
-$margin-width: 1.2%;
-$col-width: 8.43333%;
-
 // Our variables
 $base-font-family: "Advent Pro", sans-serif;
 $base-font-size: 100%;
@@ -17,16 +12,14 @@ $base-line-height: 1.8;
 $small-font-size:  0.875em;
 $smaller-font-size: 0.75em;
 
-$heading-font-family: "PT Serif", serif;
-
 $mobile-letter-spacing: 1px;
-$tablet-letter-spacing: 2px;
-$desktop-letter-spacing: 3px;
+$tablet-letter-spacing: 1.8px;
+$desktop-letter-spacing: 2.5px;
 
 $spacing-unit:      20px;
 
-$text-color:       #202020;
-$background-color: #FFF;
+$text-color:       #333;
+$background-color: #F6F6F6;
 $brand-color:      #1B95BF;     // Blue
 
 $secondary-color:  #FFBC1C;     // Orange
@@ -39,7 +32,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 
 
 // Width of the content area
-$content-width:     900px;
+$content-width:     990px;
 
 $on-tablet:         768px;
 $on-desktop:        1024px;

@@ -4,6 +4,8 @@
 header#site-header,
 footer#site-footer {
  padding: $spacing-unit;
+ background: url("../assets/bg/bg-texture.png") 100% 100%;
+ background-color: #1B95BF;
 }
 main#main-content {
   max-width: $content-width;
@@ -56,7 +58,6 @@ div.mockup-showcase {
  * HERO SECTION
  */
 section.hero {
-  color: $grey-color-light;
   font-size: 5vw;
 
   div#hero-name,
@@ -103,8 +104,6 @@ section.mockups {
  * LATEST MUSING SECTION
  */
 section.latest-musing {
-  color: $grey-color-light;
-
   h2 {
     margin-bottom: 0;
     text-align: center;
@@ -171,7 +170,6 @@ section.contact,
 article.musing {
   display: flex;
   flex-direction: column;
-  color: $grey-color-light;
 
 
   h1 {
@@ -216,7 +214,6 @@ footer#site-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #035E7C;
   color: $grey-color-light;
 
   div.footer-copyright {
@@ -289,7 +286,7 @@ footer#site-footer {
   }
 
   section.quote {
-    width: 80%;
+    width: 70%;
 
     p {
       font-size: $base-font-size;
