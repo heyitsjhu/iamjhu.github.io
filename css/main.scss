@@ -3,24 +3,25 @@
 ---
 @charset "utf-8";
 
+
 // Our variables
-$base-font-family: "Advent Pro", sans-serif;
+$base-font-family: "Raleway", sans-serif;
 $base-font-size: 100%;
 $base-font-weight: 400;
-$base-line-height: 1.8;
+$base-line-height: 1.6;
+$heading-font-family: "Lora", serif;
 
 $small-font-size:  0.875em;
 $smaller-font-size: 0.75em;
 
-$mobile-letter-spacing: 1px;
-$tablet-letter-spacing: 1.8px;
-$desktop-letter-spacing: 2.5px;
-
 $spacing-unit:      20px;
 
-$text-color:       #333;
+$text-color:       #000;
 $background-color: #F6F6F6;
 $brand-color:      #1B95BF;     // Blue
+$brand-color-light: lighten($brand-color, 40%);
+$brand-color-dark:  darken($brand-color, 25%);
+
 
 $secondary-color:  #FFBC1C;     // Orange
 $secondary-color-dark: darken($secondary-color, 10%);
@@ -32,7 +33,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 
 
 // Width of the content area
-$content-width:     990px;
+$content-width:     1280px;
 
 $on-tablet:         768px;
 $on-desktop:        1024px;

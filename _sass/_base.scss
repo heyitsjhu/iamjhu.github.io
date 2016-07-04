@@ -16,7 +16,6 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  letter-spacing: $mobile-letter-spacing;
   color: $text-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
@@ -33,7 +32,7 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
+h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
@@ -118,12 +117,15 @@ h6 {
  * Links
  */
 a {
-  color: $secondary-color;
-  text-decoration: none;
-
+  &:link,
+  &:visited,
+  &:active {
+    color: $brand-color;
+    text-decoration: none;
+}
   &:hover {
-    color: $secondary-color-dark;
-  };
+    color: $brand-color-light;
+  }
 }
 
 
@@ -133,10 +135,10 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
-  padding-left: $spacing-unit / 2;
+  border-left: 4px solid $brand-color-light;
+  padding-left: $spacing-unit;
   font-style: italic;
+  text-align: center;
 
   > :last-child {
     margin-bottom: 0;
@@ -189,6 +191,11 @@ pre {
   flex-direction: row;
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .thin {
   font-weight: 100;
 }
@@ -211,30 +218,14 @@ pre {
 
 
 /**
- * Clearfix
- */
-%clearfix {
-
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-
-
-
-/**
  * MEDIA QUERIES
  */
 @include media-query($on-tablet) {
   body {
     font-size: $base-font-size * 1.125;
-    letter-spacing: $tablet-letter-spacing;
   }
 
-  h1, p, ul, ol {
+  p, ul, ol {
     margin-bottom: $spacing-unit * 2;
   }
 
@@ -264,19 +255,9 @@ pre {
 @include media-query($on-desktop) {
   body {
     font-size: $base-font-size * 1.25;
-    letter-spacing: $desktop-letter-spacing;
   }
 
-  h1, p, ul, ol {
+  p, ul, ol {
     margin-bottom: $spacing-unit * 2.5;
-  }
-}
-
-
-
-
-@include media-query($on-hd-screen) {
-  body {
-    font-size: $base-font-size * 1.375;
   }
 }

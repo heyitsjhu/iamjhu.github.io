@@ -14,6 +14,8 @@ HTML5 has been around for several years now. Most major browsers now support HTM
   * HTML5 is the fifth and current version of the Hypertext Markup Language.
 * ### How has HTML5 evolved from HTML4?
   * HTML5 introduces new functional tags and features. In addition to the semantic tags mentioned earlier, HTML5 is also equipped with tags like `<header>`, `<footer>`, `<video>` and `<audio>`. HTML5 comes with new features too like [accessible forms][2] and [links][3], as well as a bunch of new form [`<input>` attributes][4].
+
+  <div class="post-segment">
 * ### How can you find out which HTML5 features are supported by which browsers?
   * All major browsers have supported most HTML5 features for several years now.
 * ### What is a MIME type and why is this important to your browser?
@@ -22,7 +24,7 @@ HTML5 has been around for several years now. Most major browsers now support HTM
   * No. This was something you needed to do back when development groups tried to push everyone to use XHTML, which blows up when any syntax errors are detected. In HTML5, you no longer need to "close" unpaired tags.
 * ### How do you declare a new HTML5 document?
   * With the `<!DOCTYPE html>` tag.
-
+</div>
 ## HTML5 Semantic Tags
 * ### What are "sectioning elements" and why are they called that?
   * Sectioning elements define specific parts of a webpage. For example, `<article>`, `<nav>`, `<aside>` and `<section>` are all sectioning tags.
