@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
+<article class="post">
 
-<div class="page">
-  {% if page.url == "/musings/" %}
-    <article class="musing" itemscope itemtype="http://schema.org/BlogPosting">
-      {{ content }}
-    </article>
-  {% else %}
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <div class="post-content">
     {{ content }}
-  {% endif %}
-</div>
+  </div>
+
+</article>

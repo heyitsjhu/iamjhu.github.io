@@ -6,22 +6,37 @@ layout: default
 
 -->
 {% for post in site.posts limit:1 %}
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <div class="section-small">
-      <div class="post-quote-area">
-        Hello, I'm a quote.
+  <article class="post flex" itemscope itemtype="http://schema.org/BlogPosting">
+
+    {% if post.previous.url %}
+      <div class="prev-post">
+        <a class="prev-post-link" href="{{ post.previous.url }}" title="{{ post.previous.title }}">
+          &laquo;
+        </a>
       </div>
+    {% endif %}
+    
+    <div>
+    <header class="post-heading-area">
+      <h1 class="post-title">
+        {{ post.title }}
+      </h1>
+    </header>
+    <section class="post-content">
+      <div>
+        {{ post.content }}
+      </div>
+    </section>
     </div>
 
-    <div class="section-large">
-      <header class="post-heading-area">
-        <h1 class="post-title">
-          {{ post.title }}
-        </h1>
-      </header>
-      <section class="post-content">
-          {{ post.content }}
-      </section>
-    </div>
+    
+    {% if post.next.url %}
+      <div class="next-post">
+        <a class="next-post-link" href="{{ post.next.url }}" title="{{ post.next.title }}">
+          &raquo;
+        </a>
+      </div>
+    {% endif %}
+      
   </article>
 {% endfor %}
