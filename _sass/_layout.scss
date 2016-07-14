@@ -5,30 +5,27 @@
     padding: 3px $spacing-unit;
     border-top: 3px solid $brand-color;
     border-bottom: 1px solid $grey-color-light;
+    box-shadow: 2px 2px 5px $grey-color-light;
     display: flex;
     justify-content: space-between;
 
     a {
         color: $grey-color;
-
-        &:hover {
+    }
+    a:hover {
             color: $grey-color-dark;
             text-decoration: none;
         }
-    }
 }
 
-/*.site-nav {
-
-    .page-link {
-        color: $text-color;
-
+.site-nav {
+    .nav-link {
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
-            margin-right: 20px;
+            margin-right: $spacing-unit * 3;
         }
     }
-}*/
+}
 
 
 
@@ -105,9 +102,7 @@
 /**
  * Page content
  */
-.page-content {
-    padding: $spacing-unit 0;
-}
+
 
 .page-heading {
     font-size: 20px;

@@ -16,6 +16,7 @@ dl, dd, ol, ul, figure {
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
+    letter-spacing: $letter-spacing;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
@@ -26,6 +27,9 @@ body {
 }
 
 
+main {
+    padding: $spacing-unit 0;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -82,7 +86,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
+    font-weight: 700;
 }
 
 

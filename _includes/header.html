@@ -1,17 +1,15 @@
 <header id="site-header">
 
-    <a class="site-owner" href="{{ site.baseurl }}/">{{ site.title }}</a>
+  <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
-    <a class="site-owner-email" href="mailto:{{ site.email }}/">{{ site.email }}</a>
-    <!-- <nav class="site-nav">
+  <nav class="site-nav">
+    {% for my_page in site.pages %}
+      {% if my_page.title %}
+      <a class="nav-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+      {% endif %}
+    {% endfor %}
+  </nav>
 
-      <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </nav> -->
+  <a class="site-owner-email" href="mailto:{{ site.email }}/">{{ site.email }}</a>
 
 </header>
