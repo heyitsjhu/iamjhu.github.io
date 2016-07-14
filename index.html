@@ -2,41 +2,22 @@
 layout: default
 ---
 
-<!-- 
+<div class="home">
 
--->
-{% for post in site.posts limit:1 %}
-  <article class="post flex" itemscope itemtype="http://schema.org/BlogPosting">
+  <h1 class="page-heading">Posts</h1>
 
-    {% if post.previous.url %}
-      <div class="prev-post">
-        <a class="prev-post-link" href="{{ post.previous.url }}" title="{{ post.previous.title }}">
-          &laquo;
-        </a>
-      </div>
-    {% endif %}
-    
-    <div>
-    <header class="post-heading-area">
-      <h1 class="post-title">
-        {{ post.title }}
-      </h1>
-    </header>
-    <section class="post-content">
-      <div>
-        {{ post.content }}
-      </div>
-    </section>
-    </div>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-    
-    {% if post.next.url %}
-      <div class="next-post">
-        <a class="next-post-link" href="{{ post.next.url }}" title="{{ post.next.title }}">
-          &raquo;
-        </a>
-      </div>
-    {% endif %}
-      
-  </article>
-{% endfor %}
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
