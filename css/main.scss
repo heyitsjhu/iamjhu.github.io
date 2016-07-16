@@ -1,22 +1,23 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@import 'https://fonts.googleapis.com/css?family=Oxygen:300,700';
+@import "https://fonts.googleapis.com/css?family=Lora|Open+Sans:700";
 @charset "utf-8";
 
 
 
 // Our variables
-$base-font-family: "Oxygen", sans-serif;
-$base-font-size:   16px;
+$heading-font-family: "Open Sans", san-serif;
+$base-font-family: "Lora", serif;
+$base-font-size:   22px;
 $base-font-weight: 300;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
-$letter-spacing:   0.8px;
+$letter-spacing:   0.5px;
 
-$text-color:       #444;
+$text-color:       #222;
 $background-color: #FDFDFD;
 $brand-color:      #714C8F;
 
@@ -25,11 +26,11 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    1024px;
+$content-width:    960px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
-$on-desktop:       1200px;
+$on-desktop:       1024px;
 
 
 
@@ -50,7 +51,9 @@ $on-desktop:       1200px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
+        "bootstrap"
+/*          "base",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting"*/
+
 ;

@@ -8,7 +8,9 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
+* {
+    box-sizing: border-box;
+}
 
 /**
  * Basic styling
@@ -28,7 +30,7 @@ body {
 
 
 main {
-    padding: $spacing-unit 0;
+    padding: ($spacing-unit * 3) 0;
 }
 
 /**
@@ -86,7 +88,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+    font-family: $heading-font-family;
 }
 
 
@@ -95,15 +97,11 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $text-color;
     text-decoration: none;
 
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
     &:hover {
-        color: $text-color;
+        color: $brand-color;
         text-decoration: underline;
     }
 }
@@ -134,9 +132,8 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+    border-radius: 5px;
+    background-color: #EEF;
 }
 
 code {
@@ -154,6 +151,12 @@ pre {
     }
 }
 
+/*
+ * Removes margin from nested pre-element
+ */
+td > pre {
+    margin-bottom: 0;
+}
 
 
 /**
