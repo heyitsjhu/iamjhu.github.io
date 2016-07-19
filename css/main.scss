@@ -42,7 +42,7 @@ $on-desktop:       1024px;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
+    @media screen and (min-width: $device) {
         @content;
     }
 }
@@ -51,9 +51,10 @@ $on-desktop:       1024px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "bootstrap"
-/*          "base",
-        "layout",
+        "bootstrap",
+        "base",
+        "sidebar"
+/*        "layout",
         "syntax-highlighting"*/
 
 ;

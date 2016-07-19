@@ -1,20 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 {% include head.html %}
 
 <body>
+  <div id="main-wrapper">
+    <div id="site-sidebar-wrapper">
+      <div class="sidebar-expand-btn">
+        <a href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-triangle-left"></span></a>
+      </div>
 
-  {% include header.html %}
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="#">
+              Start Bootstrap
+          </a>
+        </li>
+        <li><a href="#">Link1</a></li>
+        <li><a href="#">Link1</a></li>
+        <li><a href="#">Link1</a></li>
+        <li><a href="#">Link1</a></li>
+        <li><a href="#">Link1</a></li>
+      </ul>
+    </div> <!-- /#site-sidebar-wrapper -->
 
-  <main>
-    <div class="wrapper">
-      {{ content }}
-    </div>
-  </main>
+    <div id="#page-content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <main>
+              {{ content }}
+            </main>
+            {% include footer.html %}
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </div><!-- /#page-content-wrapper -->
+  </div><!-- /#main-wrapper -->
 
-  {% include footer.html %}
-
+   <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#main-wrapper").toggleClass("toggled");
+    });
+    </script>
 </body>
 
 </html>
