@@ -39,15 +39,8 @@
     </div>
     {% endif %}
 
-    <footer class="sidebar__footer">
-      <a href="mailto: {{ site.email }}">{{ site.email }}</a>
-      {% if site.github_username %}
-        {% include icon-github.html username=site.github_username %}
-      {% endif %}
-      {% if site.linkedin_username %}
-        {% include icon-linkedin.html username=site.linkedin_username %}
-      {% endif %}
-    </footer>
+    {% include sidebar_footer.html %}
+
   </header><!-- /.sidebar -->
   <main>
     {{ content }}
