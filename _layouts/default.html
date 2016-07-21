@@ -4,49 +4,53 @@
 {% include head.html %}
 
 <body>
-  <aside class="sidebar">
-    <header class="sidebar__header">
-      <nav>
-        <ul class="sidebar__nav">
-          {% assign pages = site.pages | sort:"weight"  %}
-          {% for p in pages %}
-            {% if p.title %}
-              <li>
-                <a href="{{ p.url | prepend: site.baseurl }}"
-                   class="sidebar__nav__item
-                          {% if p.url == page.url %}
-                            active-link
-                          {% endif %}
-                ">
-                  {{ p.title }}
-                </a>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </nav>
-    </header>
-
+  <header class="sidebar">
+    <nav>
+      <ul class="sidebar__nav">
+        {% assign pages = site.pages | sort:"weight"  %}
+        {% for p in pages %}
+          {% if p.title %}
+            <li>
+              <a href="{{ p.url | prepend: site.baseurl }}"
+                 class="sidebar__nav__item
+                        {% if p.url == page.url %}
+                          active-link
+                        {% endif %}">
+                {{ p.title }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+    
     <div class="sidebar__brand">
       Johnny Hu
     </div>
 
+    {% if page.url == '/' %}
     <div class="sidebar__blog-listing">
-      <h3>Recent Posts</h3>
+      <h3 class="sidebar__blog-listing__header">Recent Posts</h3>
       <ul class="sidebar__blog-list">
         {% for post in site.posts limit:3 %}
           <li><a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
       </ul>
     </div>
+    {% endif %}
+
     <footer class="sidebar__footer">
-      {{ site.email }}
+      <a href="mailto: {{ site.email }}">{{ site.email }}</a>
+      {% if site.github_username %}
+        {% include icon-github.html username=site.github_username %}
+      {% endif %}
+      {% if site.linkedin_username %}
+        {% include icon-linkedin.html username=site.linkedin_username %}
+      {% endif %}
     </footer>
-  </aside><!-- /.sidebar -->
+  </header><!-- /.sidebar -->
   <main>
-    <div class="content">
-      {{ content }}
-    </div><!-- /.content -->
+    {{ content }}
   </main>
 </body>
 </html>

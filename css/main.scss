@@ -7,27 +7,28 @@
 
 
 // Our variables
-$base-font-family: "Advent Pro", sans-serif;
-$base-font-size:   18px;
-$base-font-weight: 300;
-$small-font-size:  $base-font-size * 0.875;
-$smaller-font-size:  $base-font-size * 0.75;
-$base-line-height: 1.6;
+$base-font-family:    "Advent Pro", sans-serif;
+$base-font-size:      18px;
+$base-font-weight:    300;
+$small-font-size:     $base-font-size * 0.875;
+$smaller-font-size:   $base-font-size * 0.75;
+$base-line-height:    1.6;
 $base-letter-spacing: 0.8px;
 
-$spacing-unit:     30px;
+$spacing-unit:      30px;
 
 $background-color:  #FAFAFA;
-$text-color:        #555;
+$text-color-dark:   #222;
+$text-color-light:  #FAFAFA;
 $brand-color:       #1E7896;
-$brand-color-light: lighten($brand-color, 40%);
+$brand-color-light: lighten($brand-color, 15%);
 $brand-color-dark:  darken($brand-color, 15%);
 
 $grey-color:         #D3D3D3;
-$grey-color-lighter: lighten($grey-color, 60%);
-$grey-color-light:   lighten($grey-color, 20%);
-$grey-color-dark:    darken($grey-color, 25%);
-$grey-color-darker:  darken($grey-color, 60%);
+$grey-color-lighter: lighten($grey-color, 30%);
+$grey-color-light:   lighten($grey-color, 15%);
+$grey-color-dark:    darken($grey-color, 15%);
+$grey-color-darker:  darken($grey-color, 30%);
 
 // Width of the content area
 $content-width:    960px;
