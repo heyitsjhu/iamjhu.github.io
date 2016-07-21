@@ -6,16 +6,13 @@ weight: 4
 ---
 <section class="content">
 
-<h1 class="page-heading">Posts</h1>
-
-{% assign pages = site.pages | sort:"weight"  %}
-<ul class="post-list">
+<ul class="post__list">
   {% for post in site.posts %}
     <li>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <span class="post__meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
       <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>
     </li>
   {% endfor %}

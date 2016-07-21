@@ -68,6 +68,7 @@ h6 {
     font-size: 0.75em;
 }
 
+
 /**
  * Images
  */
@@ -75,7 +76,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
 
 
 /**
@@ -88,7 +88,6 @@ figure > img {
 figcaption {
     font-size: $small-font-size;
 }
-
 
 
 /**
@@ -170,6 +169,17 @@ td > pre {
     margin-bottom: 0;
 }
 
+/*
+ * Add some default padding to headers
+ */
+header {
+    padding-top: $spacing-unit * 0.75;
+    padding-bottom: $spacing-unit;
+}
+
+/*
+ * Add some default stylings to footer
+ */
 footer {
     width: 100%;
     padding: 0 20px;
