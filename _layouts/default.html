@@ -23,20 +23,13 @@
         {% endfor %}
       </ul>
     </nav>
-    
+
     <div class="sidebar__brand">
       Johnny Hu
     </div>
 
     {% if page.url == '/' %}
-    <div class="sidebar__blog-listing">
-      <h3 class="sidebar__blog-listing__header">Recent Posts</h3>
-      <ul class="sidebar__blog-list">
-        {% for post in site.posts limit:3 %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
+      {% include recent_posts.html limit=3 %}
     {% endif %}
 
     {% include sidebar_footer.html %}
