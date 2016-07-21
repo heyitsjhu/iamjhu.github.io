@@ -18,16 +18,42 @@ dl, dd, ol, ul, figure {
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
-    letter-spacing: $letter-spacing;
+    letter-spacing: $base-letter-spacing;
     background-color: $background-color;
+    background-image: url("../assets/background.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
-    overflow-x: hidden;
 }
+
+/**
+ * Wrapper for main content area
+ */
+main {
+    padding-left: 300px;
+}
+/*
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+    @extend %clearfix;
+
+    @include media-query($on-laptop) {
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+        max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: $spacing-unit;
+        padding-left: $spacing-unit;
+    }
+}*/
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -39,6 +65,13 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    color: $grey-color-darker;
+    font-weight: 500;
+}
 
 
 /**
@@ -79,29 +112,18 @@ li {
 }
 
 
-
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-    font-family: $heading-font-family;
-}
-
-
-
 /**
  * Links
  */
-a {
+a:link,
+a:active,
+a:visited {
     color: $text-color;
     text-decoration: none;
-
-    &:hover {
-        color: $brand-color;
-        text-decoration: underline;
-    }
 }
-
+a:hover {
+    color: $brand-color;
+}
 
 
 /**
@@ -127,7 +149,7 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
+    font-size: $smaller-font-size;
     border-radius: 5px;
     background-color: #EEF;
 }
@@ -154,73 +176,13 @@ td > pre {
     margin-bottom: 0;
 }
 
-
-/**
- * Wrappers
- */
-
-#main-wrapper {
-    padding-right: 25px;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-#main-wrapper.toggled {
-    padding-right: 250px;
-}
-
-#site-sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    right: 250px;
-    width: 25px;
-    height: 100%;
-    margin-right: -250px;
-    overflow-y: auto;
-    background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-#main-wrapper.toggled #site-sidebar-wrapper {
-    width: 250px;
-}
-
-#page-content-wrapper {
+footer {
     width: 100%;
-    position: absolute;
-    padding: 15px;
+    padding: 5px 10px 5px 20px;
+    background-color: $grey-color-dark;
+    font-size: $smaller-font-size;
+    color: $grey-color-light;
 }
-
-#main-wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-left: -250px;
-}
-
-
-
-.wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
-}
-
-
 
 /**
  * Clearfix
@@ -231,24 +193,5 @@ td > pre {
         content: "";
         display: table;
         clear: both;
-    }
-}
-
-
-
-/**
- * Icons
- */
-.icon {
-
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
     }
 }

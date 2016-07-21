@@ -1,36 +1,40 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@import "https://fonts.googleapis.com/css?family=Lora|Open+Sans:700";
+@import 'https://fonts.googleapis.com/css?family=Advent+Pro:300,500';
 @charset "utf-8";
 
 
 
 // Our variables
-$heading-font-family: "Open Sans", san-serif;
-$base-font-family: "Lora", serif;
-$base-font-size:   22px;
+$base-font-family: "Advent Pro", sans-serif;
+$base-font-size:   18px;
 $base-font-weight: 300;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$smaller-font-size:  $base-font-size * 0.75;
+$base-line-height: 1.6;
+$base-letter-spacing: 0.8px;
 
 $spacing-unit:     30px;
-$letter-spacing:   0.5px;
 
-$text-color:       #222;
-$background-color: #FDFDFD;
-$brand-color:      #714C8F;
+$background-color:  #FAFAFA;
+$text-color:        #555;
+$brand-color:       #1E7896;
+$brand-color-light: lighten($brand-color, 40%);
+$brand-color-dark:  darken($brand-color, 15%);
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color:         #D3D3D3;
+$grey-color-lighter: lighten($grey-color, 60%);
+$grey-color-light:   lighten($grey-color, 20%);
+$grey-color-dark:    darken($grey-color, 25%);
+$grey-color-darker:  darken($grey-color, 60%);
 
 // Width of the content area
 $content-width:    960px;
 
-$on-palm:          600px;
-$on-laptop:        800px;
-$on-desktop:       1024px;
+$on-palm:          768px;
+$on-laptop:        1024px;
+$on-desktop:       1200px;
 
 
 
@@ -51,10 +55,7 @@ $on-desktop:       1024px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "bootstrap",
         "base",
-        "sidebar"
-/*        "layout",
-        "syntax-highlighting"*/
-
+        "layout",
+        "syntax-highlighting"
 ;

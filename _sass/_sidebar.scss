@@ -1,32 +1,25 @@
 /* Sidebar Styles */
-.sidebar-expand-btn {
-    float: left;
-    background-color: pink;
-    min-width: 25px;
-    height: 100%;
+.sidebar-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-.sidebar-nav {
-    position: absolute;
-    top: 0;
-    width: 225px;
-    margin: 0;
-    padding: 0;
-    padding-left: 25px;
-    list-style: none;
+    align-items: flex-start;
 }
 
-.sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
+.sidebar-content {
+    width: 300px;
+    background: $grey-color-light;
+
+    ul {
+        margin: 0;
+        list-style: none;
+    }
+
+    li {
+        line-height: 30px;
+    }
 }
 
 .sidebar-nav li a {
     display: block;
-    text-decoration: none;
     color: #999999;
 }
 
@@ -56,29 +49,29 @@
     background: none;
 }
 
-@include media-query($on-laptop) {
-    #main-wrapper {
-        padding-right: 250px;
+@include media-query($on-palm) {
+    #site-wrapper {
+        padding-right: 275px;
     }
 
-    #main-wrapper.toggled {
+    #site-wrapper.toggled {
         padding-right: 25px;
     }
 
-    #site-sidebar-wrapper {
-        width: 250px;
+    #sidebar-wrapper {
+        width: 275px;
     }
 
-    #main-wrapper.toggled #site-sidebar-wrapper {
+    #site-wrapper.toggled #sidebar-wrapper {
         width: 25px;
     }
 
-    #page-content-wrapper {
-        padding: 20px;
+    #content-wrapper {
+        padding: 20px 0;
         position: relative;
     }
 
-    #main-wrapper.toggled #page-content-wrapper {
+    #site-wrapper.toggled #content-wrapper {
         position: relative;
         margin-left: 0;
     }
