@@ -1,7 +1,7 @@
 ---
 title: "Let's Create: Reverse - Part I (Strings)"
 date: 2016-07-12 15:15:44 -0700
-labels: ruby
+tags: ruby
 ---
 
 In Ruby, the `String` class's `reverse` method produces a new string whose characters are in the reverse order of the original string.

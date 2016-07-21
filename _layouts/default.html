@@ -9,7 +9,7 @@
       <ul class="sidebar__nav">
         {% assign pages = site.pages | sort:"weight"  %}
         {% for p in pages %}
-          {% if p.title %}
+          {% if p.title and p.weight %}
             <li>
               <a href="{{ p.url | prepend: site.baseurl }}"
                  class="sidebar__nav__item
@@ -29,10 +29,10 @@
     </div>
 
     {% if page.url == '/' %}
-      {% include recent_posts.html limit=3 %}
+      {% include recent-posts.html limit=3 %}
     {% endif %}
 
-    {% include sidebar_footer.html %}
+    {% include sidebar-footer.html %}
 
   </header><!-- /.sidebar -->
   <main>

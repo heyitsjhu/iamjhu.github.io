@@ -1,7 +1,8 @@
 ---
 title: "What's the Difference between puts, print and p"
 date: 2016-07-06 17:30:44 -0700
-category: [ruby]
+category: ruby
+tags: ruby
 ---
 
 `puts` calls the `to_s` method on an `object`, and appends a newline at the end of its output. Its `return` value is `nil`.

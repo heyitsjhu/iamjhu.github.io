@@ -2,6 +2,7 @@
 title: "Think of a Method as a Verb—It Should Only Do One Thing, Part I"
 date: 2016-05-05 16:08:10 -0700
 disqus_identifier: "18914311-0a94-4b52-b78a-e3b920f001db"
+category: ruby
 tags: [ruby, programming, coding]
 ---
 
