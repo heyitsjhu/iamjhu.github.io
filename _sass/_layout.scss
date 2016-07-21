@@ -155,7 +155,10 @@
     color: $grey-color-dark;
 }
 
-
+.post__label {
+    font-weight: bold;
+    text-transform: capitalize;
+}
 
 /*.post {
     a {

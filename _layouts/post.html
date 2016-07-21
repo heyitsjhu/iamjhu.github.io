@@ -10,8 +10,12 @@ layout: default
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
           {{ page.date | date: " Posted on %A, %B %-d, %Y" }}
         </time>
-        {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">{{ page.author }}</span></span>
+        {% if page.labels %} in 
+          {% for label in page.labels %}
+            <span class="post__label"><a href="#">
+              {{ label }}
+            </a></span>
+          {% endfor %}
         {% endif %}
       </p>
     </header>
