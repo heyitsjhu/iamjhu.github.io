@@ -6,7 +6,7 @@
 
 
 
-// Our variables
+// Variables
 $base-font-family:    "Advent Pro", sans-serif;
 $base-font-size:      18px;
 $base-font-weight:    300;
@@ -17,18 +17,28 @@ $base-letter-spacing: 0.8px;
 
 $spacing-unit:      40px;
 
-$background-color:  #FAFAFA;
-$text-color-dark:   #222;
-$text-color-light:  #FAFAFA;
-$brand-color:       #1E7896;
+$background-color:  #FAFAFA; // rgb(250,250,250)
+$text-color-dark:   #222;    // rgb(34,34,34)
+$text-color-light:  #FAFAFA; 
+$brand-color:       #1E7896; // rgb(30,120,150)
 $brand-color-light: lighten($brand-color, 15%);
 $brand-color-dark:  darken($brand-color, 15%);
 
-$grey-color:         #D3D3D3;
+$grey-color:         #D3D3D3; // rgb(211,211,211)
 $grey-color-lighter: lighten($grey-color, 30%);
 $grey-color-light:   lighten($grey-color, 15%);
 $grey-color-dark:    darken($grey-color, 15%);
 $grey-color-darker:  darken($grey-color, 30%);
+
+
+// Mixins
+@mixin animation($settings) {
+    -webkit-animation: $settings; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: $settings; /* Firefox < 16 */
+        -ms-animation: $settings; /* Internet Explorer */
+         -o-animation: $settings; /* Opera < 12.1 */
+            animation: $settings;
+}
 
 // Width of the content area
 $content-width:    960px;
@@ -56,6 +66,7 @@ $on-desktop:       1200px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "loader",
         "base",
         "layout",
         "syntax-highlighting"
