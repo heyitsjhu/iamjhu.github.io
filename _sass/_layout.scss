@@ -86,21 +86,6 @@
     }
 }
 
-.sidebar__blog-listing {
-    padding: 10px 20px 0 20px;
-}
-
-.sidebar__blog-listing__header {
-    border-bottom: 2px solid $grey-color-dark;
-    text-align: right;
-}
-
-.sidebar__blog-list {
-    margin-left: 0;
-    font-size: $small-font-size;
-    list-style: none;
-}
-
 .sidebar__footer {
     display: flex;
     justify-content: space-between;
