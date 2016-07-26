@@ -26,12 +26,8 @@
     </nav>
 
     <div class="sidebar__brand">
-      Johnny Hu
+      {% include logo.svg %}
     </div>
-
-    {% if page.url == '/' %}
-      {% include recent-posts.html limit=3 %}
-    {% endif %}
 
     {% include sidebar-footer.html %}
 

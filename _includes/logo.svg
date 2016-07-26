@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="255px" height="36px" viewBox="0 0 255 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="48" letter-spacing="-2">
+        <g id="Group" transform="translate(0.000000, -10.000000)">
+            <text id="JOHNNY" font-family="Raleway-ExtraBold, Raleway" font-weight="600" fill="#515151">
+                <tspan x="0" y="45">JOHNNY</tspan>
+            </text>
+            <text id="HU" font-family="Raleway-Regular, Raleway" font-weight="normal" fill="#1E7896">
+                <tspan x="189" y="45">H</tspan>
+                <tspan x="222.424" y="45">U</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

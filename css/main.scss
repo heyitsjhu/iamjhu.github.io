@@ -17,18 +17,18 @@ $base-letter-spacing: 0.8px;
 
 $spacing-unit:      40px;
 
-$background-color:  #FAFAFA; // rgb(250,250,250)
-$text-color-dark:   #222;    // rgb(34,34,34)
+$background-color:  #FAFAFA;    // rgb(250,250,250)
+$text-color-dark:   #515151;    // rgb(81,81,81)
 $text-color-light:  #FAFAFA; 
-$brand-color:       #1E7896; // rgb(30,120,150)
-$brand-color-light: lighten($brand-color, 15%);
-$brand-color-dark:  darken($brand-color, 15%);
+$brand-color:       #1E7896;    // rgb(30,120,150)
+$brand-color-light: lighten($brand-color, 20%);
+$brand-color-dark:  darken($brand-color, 20%);
 
-$grey-color:         #D3D3D3; // rgb(211,211,211)
-$grey-color-lighter: lighten($grey-color, 30%);
-$grey-color-light:   lighten($grey-color, 15%);
-$grey-color-dark:    darken($grey-color, 15%);
-$grey-color-darker:  darken($grey-color, 30%);
+$grey-color:         #D3D3D3;   // rgb(211,211,211)
+$grey-color-lighter: lighten($grey-color, 40%);
+$grey-color-light:   lighten($grey-color, 20%);
+$grey-color-dark:    darken($grey-color, 20%);
+$grey-color-darker:  darken($grey-color, 40%);
 
 
 // Mixins
