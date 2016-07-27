@@ -1,54 +1,12 @@
 ---
 layout: default
+title: Home
+permalink: /
+weight: 1
 ---
 
-<div class="background">
-  <section class="hero flex-col">
+{% include loader.html %}
 
-    <div id="hero-require">
-      <p class="bold"><span class="thin">require</span> 'caffeine'</p>
-    </div>
-
-    <div id="hero-name">
-      <p class="bold"><span class="thin">name = </span> 'Johnny'</p>
-    </div>
-
-    <div id="hero-hello">
-      <p class="bold"><span class="thin">puts</span> 'Hello.'</p>
-    </div>
-
-    <div id="hero-dev">
-      <p class="bold"><span class="thin">i.am_a</span> Developer, Designer</p>
-    </div>
-
-    <div id="hero-logo">
-      <img src="/assets/logos/logo-white.svg">
-    </div>
-  </section>
+<div class="callout">
+  <p>San Francisco<br>California</p>
 </div>
-
-<section class="mockups flex-col">
-  <h2>Mockups to Markups</h2>
-  <div class="mockup-showcase">
-    <div class="showcase-mockup">
-    </div>
-    <div class="showcase-markup">
-    </div>
-  </div>
-  <a href="/portfolio/" class="btn">See More</a>
-</section>
-
-<div class="background">
-  <section class="latest-musing">
-    <h2>Latest Musing</h2>
-    {% for post in site.posts limit:1 %}
-      <article class="musing background" itemscope itemtype="http://schema.org/BlogPosting">
-        {% include musing-article.html %}
-      </article>
-    {% endfor %}
-  </section>
-</div>
-
-<section class="quote flex-col">
-  {% include quote.html %}
-</section>

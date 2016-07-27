@@ -2,21 +2,15 @@
  * Syntax highlighting styles
  */
 .highlight {
-    width: 100%;
-    background: $grey-color-light;
-    border-radius: 10px;
+    background: #fff;
     @extend %vertical-rhythm;
-
-    pre:first-child {
-        margin-bottom: 0;
-    }
 
     .highlighter-rouge & {
       background: #eef;
     }
 
     .c     { color: #998; font-style: italic } // Comment
-    .err   { color: #a61717; background-color: #e3d2d2 } // Error
+    .err   { color: #a61717 } // Error
     .k     { font-weight: bold } // Keyword
     .o     { font-weight: bold } // Operator
     .cm    { color: #998; font-style: italic } // Comment.Multiline

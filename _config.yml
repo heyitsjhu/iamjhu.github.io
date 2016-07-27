@@ -6,19 +6,16 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Web Developer and Designer | Johnny Hu
-owner: Johnny Hu
+title: Johnny Hu
 email: jgeehen.hu@gmail.com
-copyright: "&copy; 2016 iamjhu. All rights reserved."
 description: > # this means to ignore newlines until "baseurl:"
-  Failures. Triumphs. And a lot of caffeine. Hi there—I'm Johnny. I design, markup and build web applications. 
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.iamjhu.com" # the base hostname & protocol for your site
 linkedin_username: jgeehenhu
-twitter_username: iamjhu
-facebook_username: jhu1986
-instagram_username: jhuphotos
-github_username:  iamjhu
+github_username:   iamjhu
 
 # Build settings
 markdown: kramdown
@@ -27,13 +24,7 @@ defaults:
   -
     scope:
       path: ""
-    values:
-      layout: "default"
-  -
-    scope:
-      path: ""
       type: "posts"
     values:
       layout: "post"
-      author: "Johnny"
-
+      categories: ["blog"]

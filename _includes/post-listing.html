@@ -1,0 +1,19 @@
+<ul class="post__list">
+  {% for post in site.posts %}
+
+    {% unless post.url == '/blog/' %}
+      {% if post.tags contains include.tag %}
+    {% endif %}
+    
+      <li>
+        <span class="post__meta">{{ post.date | date: "%A, %b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endunless %}
+  {% endfor %}
+</ul>
+
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

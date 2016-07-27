@@ -1,8 +1,29 @@
 ---
 layout: default
 ---
-<article class="musing background" itemscope itemtype="http://schema.org/BlogPosting">
-  {% include musing-article.html %}
-  {% include musing-nav.html %}
-  {% include disqus_comments.html %}
-</article>
+
+<div class="container">
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="post__header">
+      <h1 class="post__title" itemprop="name headline">{{ page.title }}</h1>
+      <p class="post__meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ page.date | date: " Posted on %A, %B %-d, %Y" }}
+        </time>
+        {% if page.tags %} under 
+          {% for tag in page.tags %}
+            <span class="post__tag"><a href="/blog/{{tag}}/">
+              {{ tag }}
+            </a></span>
+          {% endfor %}
+        {% endif %}
+      </p>
+    </header>
+
+    <div class="post__content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+  </article>
+</div>
