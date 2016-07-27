@@ -4,7 +4,7 @@ date: 2016-07-27 10:34:46 -0700
 tags: ruby
 ---
 
-In Ruby, when you send an object a message, that object then searches for a corresponding method to execute. The first method it finds matching the corresponding message it was sent is the method that gets executed. But where exactly does the object look and does it look in a particular order?
+In Ruby, when you send a message to an object, that object searches a path, known as the method-lookup path, for a corresponding method to execute.  The first method it finds matching the corresponding message it received is the method that gets executed. But where exactly does the object look and does it look in a particular order?
 
 ## Searching class and superclasses
 
