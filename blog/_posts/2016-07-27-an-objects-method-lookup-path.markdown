@@ -30,7 +30,7 @@ Greeting. You're receiving this message from Class D.
 => nil
 {% endhighlight %}
 
-Predictably, object `d` executes the `greeting` method defined in class `D`. This is because an object first looks at the instance methods defined in its own class. For a simple example like ours, this is the first stop in an object's *method-lookup path*. 
+Predictably, object `d` executes the `greeting` method defined in class `D`. This is because an object first looks at the instance methods defined in its own class. For a simple example like ours, this is the first stop in an object's *method-lookup path*.
 
 If our object doesn't find a corresponding method in its class, it moves onto the class's superclass. And if it doesn't find one in the superclass, it checks the superclass's superclass. This process continues until there are no more superclasses to left.
 
@@ -39,11 +39,11 @@ To find out which class is our class's superclass, we can call the `superclass` 
 {% highlight ruby linenos %}
 > D.superclass
 => C
-irb(main):018:0> C.superclass
+> C.superclass
 => Object
-irb(main):019:0> Object.superclass
+> Object.superclass
 => BasicObject
-irb(main):020:0> BasicObject.superclass
+> BasicObject.superclass
 => nil
 {% endhighlight %}
 
@@ -119,7 +119,7 @@ Yo-yo-yo! This is from module Hello.
 
 It worked! This leads me to believe the first stop in our object's method-lookup path is *still* its own class, even if we include a module. Once we comment out the method in our class, the method in our module executed flawlessly.
 
-This mean our module is the second stop in an object's method-lookup path. After not finding a match in its class, our object moves onto the `Hello` module, finds a `greeting` method, and executes it. Had our object not found a `greeting` method inside the `Hello` module, it would've moved onto the class's superclass, class `C`. 
+This mean our module is the second stop in an object's method-lookup path. After not finding a match in its class, our object moves onto the `Hello` module, finds a `greeting` method, and executes it. Had our object not found a `greeting` method inside the `Hello` module, it would've moved onto the class's superclass, class `C`.
 
 You can confirm this by calling the `ancestors` method on our object's class.
 
@@ -134,7 +134,7 @@ You can see the `Hello` module is now included in the ancestor chain. And, confi
 
 Another way to attach a module onto a class is to use the `prepend` keyword instead of the `include` keyword. Doing so changes the order in which the module is searched in the method-lookup path.
 
-Let's see this in action. 
+Let's see this in action.
 
 We'll keep our `Hello` module in place and create a new module, `Goodbye`. We'll create a `greeting` method within this module as well. Next, we'll `prepend` the module to class `D`. (Don't forget to *uncomment* the `greeting` method in our class. We want all our methods to be active and ready to respond to our object.) What do you think will happen?
 
@@ -239,7 +239,7 @@ end
 
 > d = D.new
 => #<D:0x007f88e3837408>
-irb(main):039:0> d.greeting
+> d.greeting
 The conversation ends before it even starts! Goodbye!
 => nil
 {% endhighlight %}
@@ -263,7 +263,7 @@ end
 
 > d = D.new
 => #<D:0x007f88e3058e58>
-irb(main):050:0> d.greeting
+> d.greeting
 The conversation ends before it even starts! Goodbye!
 => nil
 {% endhighlight %}
