@@ -1,5 +1,5 @@
 /**
- * CONTAINER
+ * Containers and Wrappers
  */
  .container {
     position: absolute;
@@ -39,7 +39,7 @@
 }
 
 /**
- * SIDEBAR
+ * Sidebar
  */
 
 .sidebar {
@@ -116,7 +116,7 @@
 
 
 /**
- * LANDING PAGE
+ * Landing Page
  */
 .callout {
     position: absolute;
@@ -132,7 +132,7 @@
 
 
 /**
- * PAGES AND POSTS
+ * Pages
  */
 
 .page,
@@ -159,6 +159,7 @@
 }
 
 .page__content {
+    display: flex;
     width: 100%;
 }
 
@@ -166,6 +167,12 @@
     font-size: 2.25em;
 }
 
+/*
+ * Posts
+ */
+.post__header {
+    padding-top: 0;
+}
 
 .post__title {
     margin-bottom: 0;
@@ -176,6 +183,7 @@
     list-style: none;
 
     > li {
+        border-bottom: 1px solid $grey-color;
         margin-bottom: $spacing-unit / 2;
     }
 }
@@ -189,3 +197,58 @@
     font-weight: bold;
     text-transform: capitalize;
 }
+
+a.post__read-more {
+    color: $brand-color;
+
+    &:hover {
+        background-color: $brand-color;
+        color: $text-color-light;
+    }
+}
+
+/*
+ * Tags
+ */
+
+.tags {
+    margin: 20px;
+    min-width: 120px;
+}
+
+.tag__heading {
+    text-decoration: underline;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+}
+.tag__list {
+    margin-left: 0;
+    padding-left: 10px;
+    border-left: 1px solid $grey-color;
+    list-style: none;
+}
+
+.tag__item .posts-count {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+
+.btn {
+    padding: 5px 10px;
+    border: 2px solid $brand-color;
+    border-radius: 5px;
+    font-size: $small-font-size;
+    color: $text-color-light;
+}
+
+/*
+ * Breadcrumbs
+ */ 
+
+ .breadcrumbs {
+    margin-top: $spacing-unit;
+    color: $grey-color-dark;
+    font-size: $smaller-font-size
+ }

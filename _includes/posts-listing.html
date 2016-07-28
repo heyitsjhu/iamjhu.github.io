@@ -1,0 +1,21 @@
+<ul class="post__list">
+  {% for post in site.posts %}
+    <li>
+      <span class="post__meta">
+        {{ post.date | date: "%A, %B %-d, %Y" }}
+      </span>
+
+      <h2>
+        <a class="post__title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+      <p>
+        {{ post.excerpt }}
+      </p>
+      <p>
+        <a class="btn post__read-more" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+      </p>
+    </li>
+  {% endfor %}
+</ul>
+
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

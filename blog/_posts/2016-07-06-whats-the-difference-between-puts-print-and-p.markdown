@@ -1,7 +1,6 @@
 ---
 title: "What's the Difference between puts, print and p"
 date: 2016-07-06 17:30:44 -0700
-category: ruby
 tags: ruby
 ---
 

@@ -2,7 +2,7 @@
 title: "What's the Difference Between an Integer and a Float?"
 date: 2016-06-06 11:40:36 -0700
 disqus_identifier: "0f62e9ad-6e64-4535-b0d5-3a1919fc8c94"
-tags: [ruby, fundamentals, integer, float]
+tags: [ruby]
 ---
 
 In Ruby, an `integer` represents whole numbers (i.e., `1`, `50`, and `23`), while a `float` represents inexact real numbers (i.e., `1.6`, `54.39`, and `20.0`). 

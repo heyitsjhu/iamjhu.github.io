@@ -111,7 +111,7 @@ li {
 a,
 a:active,
 a:visited {
-    color: inherit;
+    color: $text-color-dark;
     text-decoration: none;
 }
 a:hover {
@@ -184,6 +184,10 @@ footer {
     width: 100%;
     padding: 0 20px;
     background-color: $grey-color-dark;
+
+    a {
+        color: $text-color-light;
+    }
 }
 
 /**
