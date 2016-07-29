@@ -5,9 +5,35 @@ permalink: /blog/
 weight: 4
 ---
 
-<div class="posts">
+<div class="posts" id="all-posts">
+  <ul class="post__list">
+    {% for post in site.posts | limit:5 %}
+      <li>
+        <span class="post__meta">
+          {{ post.date | date: "%A, %B %-d, %Y" }}
+        </span>
+
+        <h2>
+          <a class="post__title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <p>
+          {{ post.excerpt }}
+        </p>
+        <p>
+          <a class="btn post__read-more" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+        </p>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% for tag in site.tags %}
+  {% assign t = tag | first %}
+  {% assign posts = tag | last %}
+<div class="posts hidden" id="{{ t }}-posts">
   {% include posts-listing.html %}
 </div>
+{% endfor %}
 
 <div class="tags">
   <h3 class="tag__heading">Tags</h3>
@@ -15,11 +41,8 @@ weight: 4
     {% for tag in site.tags %}
       {% assign t = tag | first %}
       {% assign posts = tag | last %}
-      <li class="tag__item">
-        {{t | downcase }}
-        <span class="posts-count">
-          ({{ posts | size }})
-        </span>
+      <li class="tag__item" id="{{ t }}-item">
+        <a href onclick="filter('{{ t }}'); return false;">{{t | downcase }} ({{ posts | size }})</a>
       </li>
     {% endfor %}
   </ul>

@@ -1,5 +1,6 @@
 <ul class="post__list">
-  {% for post in site.posts %}
+  {% for post in posts %}
+    {% if post.tags contains t %}
     <li>
       <span class="post__meta">
         {{ post.date | date: "%A, %B %-d, %Y" }}
@@ -15,6 +16,7 @@
         <a class="btn post__read-more" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
       </p>
     </li>
+    {% endif %}
   {% endfor %}
 </ul>
 
