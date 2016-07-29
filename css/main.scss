@@ -16,6 +16,7 @@ $base-line-height:      1.6;
 $base-letter-spacing:   0.8px;
 
 $spacing-unit:          40px;
+$radius:                3px;
 
 $background-color:      #FAFAFA;    // rgb(250,250,250)
 $text-color-dark:       #515151;    // rgb(81,81,81)
@@ -43,7 +44,8 @@ $grey-color-darker:     darken($grey-color, 40%);
 // Width of the content area
 $content-width:    960px;
 
-$on-palm:          768px;
+$bp-640:           640px;
+$on-tablet:        768px;
 $on-laptop:        1024px;
 $on-desktop:       1200px;
 

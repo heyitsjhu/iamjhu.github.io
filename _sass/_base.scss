@@ -142,13 +142,14 @@ blockquote {
  */
 pre,
 code {
-    font-size: $smaller-font-size;
-    border-radius: 5px;
-    background-color: #CDDDFF;
+    font-size: $small-font-size;
+    border-radius: $radius;
+    background-color: #EFEFEF;
 }
 
 code {
-    padding: 1px 5px;
+    color: $brand-color;
+    padding: 3px 10px;
 }
 
 pre {
@@ -163,7 +164,7 @@ pre {
 }
 
 /*
- * Removes margin from nested pre-element
+ * Removes margin from nested pre-formatted element
  */
 td > pre {
     margin-bottom: 0;
