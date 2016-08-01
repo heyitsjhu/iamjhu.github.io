@@ -1,7 +1,7 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@import 'https://fonts.googleapis.com/css?family=Advent+Pro:300,500';
+@import 'https://fonts.googleapis.com/css?family=Advent+Pro:400,600';
 @charset "utf-8";
 
 
@@ -9,14 +9,15 @@
 // Variables
 $base-font-family:      "Advent Pro", sans-serif;
 $base-font-size:        18px;
-$base-font-weight:      300;
+$base-font-weight:      400;
+$heading-font-weight:   600;
 $small-font-size:       $base-font-size * 0.875;
 $smaller-font-size:     $base-font-size * 0.75;
 $base-line-height:      1.6;
-$base-letter-spacing:   0.8px;
+$base-letter-spacing:   0.5px;
 
 $spacing-unit:          40px;
-$radius:                3px;
+$radius-size:           3px;
 
 $background-color:      #FAFAFA;    // rgb(250,250,250)
 $text-color-dark:       #515151;    // rgb(81,81,81)

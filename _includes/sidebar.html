@@ -1,26 +1,24 @@
-<div class="sidebar">
-  <nav>
-    <ul class="sidebar__nav">
-      {% assign pages = site.pages | sort:"weight"  %}
-      {% for p in pages %}
-        {% if p.title and p.weight %}
-          <li>
-            <a href="{{ p.url | prepend: site.baseurl }}"
-               class="sidebar__nav__item
-                      {% if p.url == page.url %}
-                        active-link
-                      {% endif %}">
-              {{ p.title }}
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </nav>
-
-  <div class="sidebar__brand">
-    {% include logo.svg %}
-  </div>
-
-  {% include sidebar-footer.html %}
+<div class="sidebar__brand">
+  {% include logo.svg %}
 </div>
+
+<nav class="sidebar__nav">
+  <ul class="sidebar__nav-list">
+    {% assign pages = site.pages | sort:"weight"  %}
+    {% for p in pages %}
+      {% if p.title and p.weight %}
+        <li>
+          <a href="{{ p.url | prepend: site.baseurl }}"
+             class="sidebar__nav-item
+                    {% if p.url == page.url %}
+                      active-link
+                    {% endif %}">
+            {{ p.title }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
+
+{% include sidebar-footer.html %}
