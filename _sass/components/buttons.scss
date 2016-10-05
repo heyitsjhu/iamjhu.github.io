@@ -1,0 +1,15 @@
+.button {
+    padding: 0.3125em 0.625em;
+    border: 0.1875em solid $text-color-dark;
+    &:hover {
+        background-color: $text-color-dark;
+        color: $text-color-light;
+        cursor: pointer;
+    }
+}
+    .button--primary {
+        @extend .button;
+        border-color: $brand-color;
+        color: $brand-color;
+        &:hover {background-color: $brand-color;}
+    }

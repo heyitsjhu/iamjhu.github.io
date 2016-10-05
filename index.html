@@ -5,8 +5,16 @@ permalink: /
 weight: 1
 ---
 
-{% include loader.html %}
-<!-- 
-<div class="callout">
-  <p>San Francisco<br>California</p>
-</div> -->
+<section class="section" id="most-recent-blog-post">
+  <div class="section__header">
+  {% assign latest_post = site.posts.first %}
+    <span class="section__title--small">Recent Post</span>
+    <h2 class="section__title">{{ latest_post.title }}</h2>
+  </div>
+  <div class="section__content">
+    {{ latest_post.excerpt }}
+  </div>
+  <div class="section__footer">
+    <a class="button--primary" href="{{ latest_post.url || prepend: site.baseurl }}">Read More</a>
+  </div>
+</section>
