@@ -43,7 +43,7 @@ $grey-color-darker:     darken($grey-color, 40%);
 }
 
 // Width of the content area
-$content-width:    960px;
+$content-width:    980px;
 
 $bp-640:           640px;
 $on-tablet:        426px;
@@ -74,6 +74,7 @@ $on-hd:            1441px;
         "base",
         "layout",
         "components/buttons",
+        "components/containers",
         "blocks/navbar",
         "blocks/section",
         "blocks/footer",

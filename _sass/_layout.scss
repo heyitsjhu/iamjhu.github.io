@@ -1,63 +1,6 @@
-/**
- * Containers and Wrappers
- */
- .container {
-    position: absolute;
-    padding-top: 40px;
-    width: 100%;
-    background-color: #FAFAFA;
-    @include animation(scrollup 2s);
-
-    @keyframes scrollup {
-    from { top: 150%; opacity: 0; }
-    to   { top: 0%; opacity: 1;}
-    }
-
-    /* Firefox < 16 */
-    @-moz-keyframes scrollup {
-        from { top: 150%; opacity: 0; }
-        to   { top: 0%; opacity: 1;}
-    }
-
-    /* Safari, Chrome and Opera > 12.1 */
-    @-webkit-keyframes scrollup {
-        from { top: 105%; opacity: 0; }
-        to   { top: 0%; opacity: 1;}
-    }
-
-    /* Internet Explorer */
-    @-ms-keyframes scrollup {
-        from { top: 150%; opacity: 0; }
-        to   { top: 0%; opacity: 1;}
-    }
-
-    /* Opera < 12.1 */
-    @-o-keyframes scrollup {
-        from { top: 150%; opacity: 0; }
-        to   { top: 0%; opacity: 1;}
-    }
-}
-
 .hidden {
   display: none!important;
   visibility: hidden!important;
-}
-
-
-
-/**
- * Landing Page
- */
-.callout {
-    position: absolute;
-    top: 80px;
-    right: 175px;
-    padding-top: $spacing-unit;
-    width: 150px;
-    height: 150px;
-    border-radius: 150px;
-    background-color: rgba(30,120,150,0.4);
-    text-align: center;
 }
 
 
@@ -190,16 +133,6 @@ a.post__read-more {
 
 
 @include media-query($on-laptop) {
-    /**
-     * Containers and Wrappers
-     */
-     .container {
-        position: absolute;
-        width: 100%;
-        padding-top: 0;
-        padding-left: 275px;
-        background-color: #FAFAFA;
-    }
 
     /**
      * Pages
