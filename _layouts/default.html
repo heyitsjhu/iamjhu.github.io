@@ -4,12 +4,39 @@
 {% include head.html %}
 
 <body>
-    <header class="sidebar">
-      {% include sidebar.html %}
-    </header>
+  <header>
+    <nav class="navbar">
+      <div class="navbar__header">
+        <a class="navbar__brand" href="/">
+          <img class="brand-image" src="assets/images/logo.svg" alt="">
+        </a>
+        <a class="navbar__menu-icon" href="javascript:void(0);" onclick="toggleNavbarMenu()">&#9776;</a>
+      </div>
+
+      <ul class="navbar-nav" id="navbarMenu">
+        {% assign pages = site.pages | sort:"weight"  %}
+        {% for p in pages %}
+          {% if p.title and p.weight %}
+            <li class="navbar-nav__item">
+              <a href="{{ p.url | prepend: site.baseurl }}"
+                 {% if p.url == page.url %}
+                 class="navbar-nav__link--active"
+                 {% else %}
+                 class="navbar-nav__link"
+                 {% endif %}
+              >
+                {{ p.title }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
 
     <main>
       {{ content }}
     </main>
+    {% include sidebar-footer.html %}
 </body>
 </html>

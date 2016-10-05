@@ -12,11 +12,14 @@ dl, dd, ol, ul, figure {
     box-sizing: border-box;
 }
 
+html {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+}
+
 /**
  * Basic styling
  */
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color-dark;
     letter-spacing: $base-letter-spacing;
     background-color: $background-color;
@@ -114,9 +117,6 @@ a:visited {
     color: $text-color-dark;
     text-decoration: none;
 }
-a:hover {
-    color: $brand-color;
-}
 
 
 /**
@@ -170,13 +170,6 @@ td > pre {
     margin-bottom: 0;
 }
 
-/*
- * Add some default padding to headers
- */
-header {
-    padding-top: $spacing-unit * 0.75;
-    padding-bottom: $spacing-unit;
-}
 
 /*
  * Add some default stylings to footer

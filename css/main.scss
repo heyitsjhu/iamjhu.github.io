@@ -8,15 +8,15 @@
 
 // Variables
 $base-font-family:      "Advent Pro", sans-serif;
-$base-font-size:        18px;
+$base-font-size:        16px;
 $base-font-weight:      400;
 $heading-font-weight:   600;
 $small-font-size:       $base-font-size * 0.875;
 $smaller-font-size:     $base-font-size * 0.75;
 $base-line-height:      1.6;
-$base-letter-spacing:   0.5px;
+$base-letter-spacing:   0;
 
-$spacing-unit:          40px;
+$spacing-unit:          1.25em;
 $radius-size:           3px;
 
 $background-color:      #FAFAFA;    // rgb(250,250,250)
@@ -46,10 +46,9 @@ $grey-color-darker:     darken($grey-color, 40%);
 $content-width:    960px;
 
 $bp-640:           640px;
-$on-tablet:        768px;
+$on-tablet:        426px;
 $on-laptop:        1024px;
 $on-desktop:       1200px;
-
 
 
 // Use media queries like this:
@@ -69,8 +68,10 @@ $on-desktop:       1200px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "loader",
+        "reset/normalize",
+        /*"loader",*/
         "base",
         "layout",
+        "blocks/navbar",
         "syntax-highlighting"
 ;
