@@ -11,7 +11,7 @@
     z-index: 10;
 }
     .brand-image {height: 1em;}
-    .navbar__menu-icon {float:right;}
+    .navbar__menu-icon {float:right; font-size: 1.125em;}
 
     .navbar-nav {
         display: none;
@@ -42,6 +42,7 @@
             padding-right: 1.25em;
             &:last-child {padding-right: 0;}
         }
+        .navbar-nav__link:hover,
         .navbar-nav__link--active {
             display: inline;
             border-bottom: 0.125em solid $brand-color;

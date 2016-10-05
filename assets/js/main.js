@@ -8,7 +8,18 @@ $(document).ready(function() {
       }, 2500);
       sessionStorage.setItem('iamjhu', 'true');
     }
-});
+})
+
+// Toggle nav menu on mobile devices
+function toggleNavbarMenu() {
+  var nav = document.getElementById('navbarMenu');
+  if (nav.className === 'navbar-nav') {
+    nav.className += '--show';
+  } else {
+    nav.className = 'navbar-nav';
+  }
+}
+
 
 function filter(tag) {
   setActiveTag(tag);
