@@ -12,14 +12,25 @@ dl, dd, ol, ul, figure {
     box-sizing: border-box;
 }
 
-html {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+html {font-size: 16px;}
+
+@include media-query($on-tablet) {
+    html {font-size: 18px;}
+}
+
+@include media-query($on-desktop) {
+    html {font-size: 20px;}
+}
+
+@include media-query($on-hd) {
+    html {font-size: 22px;}
 }
 
 /**
  * Basic styling
  */
 body {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color-dark;
     letter-spacing: $base-letter-spacing;
     background-color: $background-color;
@@ -175,9 +186,6 @@ td > pre {
  * Add some default stylings to footer
  */
 footer {
-    width: 100%;
-    padding: 0 20px;
-    background-color: $grey-color-dark;
 
     a {
         color: $text-color-light;

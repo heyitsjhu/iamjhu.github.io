@@ -8,11 +8,11 @@
 
 // Variables
 $base-font-family:      "Advent Pro", sans-serif;
-$base-font-size:        16px;
+$base-font-size:        1em;
 $base-font-weight:      400;
 $heading-font-weight:   600;
-$small-font-size:       $base-font-size * 0.875;
-$smaller-font-size:     $base-font-size * 0.75;
+$small-font-size:       0.875em;
+$smaller-font-size:     0.75em;
 $base-line-height:      1.6;
 $base-letter-spacing:   0;
 
@@ -47,8 +47,9 @@ $content-width:    960px;
 
 $bp-640:           640px;
 $on-tablet:        426px;
-$on-laptop:        1024px;
-$on-desktop:       1200px;
+$on-laptop:        769px;
+$on-desktop:       1025px;
+$on-hd:            1441px;
 
 
 // Use media queries like this:
@@ -73,5 +74,6 @@ $on-desktop:       1200px;
         "base",
         "layout",
         "blocks/navbar",
+        "blocks/footer",
         "syntax-highlighting"
 ;
