@@ -70,13 +70,17 @@ $on-hd:            1441px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "reset/normalize",
-        /*"loader",*/
+
         "base",
         "layout",
+
         "components/buttons",
         "components/containers",
+
+        "blocks/loader",
         "blocks/navbar",
         "blocks/section",
         "blocks/footer",
+        
         "syntax-highlighting"
 ;

@@ -1,9 +1,13 @@
+// Show loader animation if sessionStorage is null
 $(document).ready(function() {
- 
-    setTimeout(function(){
-        $('body').addClass('loaded');
-    }, 1500);
- 
+    if (sessionStorage.getItem('iamjhu') != 'true') {
+      $('.loader').css({'display':'block'});
+      
+      setTimeout(function(){
+          $('body').addClass('loaded');
+      }, 2500);
+      sessionStorage.setItem('iamjhu', 'true');
+    }
 });
 
 function filter(tag) {
