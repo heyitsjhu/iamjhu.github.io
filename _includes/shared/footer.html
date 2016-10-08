@@ -1,7 +1,6 @@
-<footer>
-  <div class="footer">
+<footer class="footer">
     <div class="footer__copyright">
-      &copy; 2016 iamjhu.
+      <span>&copy; 2016 iamjhu.</span>
     </div>
     
     <div class="footer__social-media">
@@ -10,12 +9,11 @@
       </a>
 
       {% if site.github_username %}
-        {% include icon-github.html username=site.github_username %}
+        {% include social-media/icon-github.html username=site.github_username %}
       {% endif %}
 
       {% if site.linkedin_username %}
-        {% include icon-linkedin.html username=site.linkedin_username %}
+        {% include social-media/icon-linkedin.html username=site.linkedin_username %}
       {% endif %}
     </div>
-  </div>
 </footer>

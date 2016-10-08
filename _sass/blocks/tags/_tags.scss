@@ -1,0 +1,15 @@
+.tags {
+    display: none;
+    margin-left: $spacing-unit;
+    padding-top: $spacing-unit * 1.5;
+    min-width: 120px;
+}
+.tags__title {
+    padding: 0 $spacing-unit;
+    margin-bottom: 0;
+}
+
+
+@include media-query($bp-640) {
+    .tags {display: initial;}
+}

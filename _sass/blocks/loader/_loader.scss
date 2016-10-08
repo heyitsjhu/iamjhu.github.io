@@ -9,59 +9,59 @@
     font-size: 1rem;
     z-index: 999;
 }
+    .loader__image {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -17px;
+        text-align: center;
+    }
 
-.loader__icon {
-    display: block;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    width: 100px;
-    height: 100px;
-    margin: -50px 0 0 -50px;
-    border: 0.125em solid transparent;
-    border-top: 0.125em solid #D35D47;
-    border-radius: 50%;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
-    z-index: 1000;
-}
+    .loader__icon {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 100px;
+        height: 100px;
+        margin: -50px 0 0 -50px;
+        border: 0.125em solid transparent;
+        border-top: 0.125em solid #D35D47;
+        border-radius: 50%;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        z-index: 1000;
+    }
 
-.loader__icon:before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border: 0.125em solid transparent;
-    border-top: 0.125em solid $brand-color;
-    border-radius: 50%;
-    -webkit-animation: spin 3s linear infinite;
-    animation: spin 3s linear infinite;
-}
+    .loader__icon:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border: 0.125em solid transparent;
+        border-top: 0.125em solid $brand-color;
+        border-radius: 50%;
+        -webkit-animation: spin 3s linear infinite;
+        animation: spin 3s linear infinite;
+    }
 
-.loader__icon:after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    border: 0.125em solid transparent;
-    border-top: 0.125em solid #D3AA47;
-    border-radius: 50%;
-    -webkit-animation: spin 1.5s linear infinite;
-    animation: spin 1.5s linear infinite;
-}
+    .loader__icon:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border: 0.125em solid transparent;
+        border-top: 0.125em solid #D3AA47;
+        border-radius: 50%;
+        -webkit-animation: spin 1.5s linear infinite;
+        animation: spin 1.5s linear infinite;
+    }
 
-.loader__image {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-top: -17px;
-    text-align: center;
-}
-
+/* Fade out animation executed by JS */
 .loaded .loader__icon,
 .loaded .loader__image {
     opacity: 0;
@@ -79,9 +79,12 @@
     -webkit-transition: all 0.5s 0.8s ease-out;
             transition: all 0.5s 0.8s ease-out;
 }
+
+/* For browsers with no JS enabled */
 .no-js .loader {display: none;}
 
 
+/* Spinning animation */
 @-webkit-keyframes spin {
     0%   {
         -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */

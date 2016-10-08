@@ -1,0 +1,10 @@
+.post__header {margin-bottom: $spacing-unit;}
+.post__title {margin-bottom: 0;}
+.post__meta {
+    font-size: $small-font-size;
+    color: $grey-color-dark;
+}
+.post__tag {
+    font-weight: bold;
+    text-transform: capitalize;
+}

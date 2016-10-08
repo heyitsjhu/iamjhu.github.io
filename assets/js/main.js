@@ -21,6 +21,7 @@ function toggleNavbarMenu() {
 }
 
 
+// toggle filtering for blog posts based on tags
 function filter(tag) {
   setActiveTag(tag);
   showContainer(tag);
@@ -28,28 +29,28 @@ function filter(tag) {
 
 function setActiveTag(tag) {
   // loop through all items and remove active class
-  var items = document.getElementsByClassName('tag__item');
+  var items = document.getElementsByClassName('tags-list__item--active');
   for(var i=0; i < items.length; i++) {
-    items[i].setAttribute('class', 'tag__item');
+    items[i].setAttribute('class', 'tags-list__item');
   }
 
   // set the selected tag's item to active
   var item = document.getElementById(tag + '-item');
   if(item) {
-    item.setAttribute('class', 'tag__item tag--active');
+    item.setAttribute('class', 'tags-list__item--active');
   }
 }
 
 function showContainer(tag) {
   // loop through all lists and hide them
-  var lists = document.getElementsByClassName('posts');
+  var lists = document.getElementsByClassName('blog');
   for(var i=0; i < lists.length; i++) {
-    lists[i].setAttribute('class', 'posts hidden');
+    lists[i].setAttribute('class', 'blog--hidden');
   }
 
   // remove the hidden class from the list corresponding to the selected tag
   var list = document.getElementById(tag + '-posts');
   if(list) {
-    list.setAttribute('class', 'posts');
+    list.setAttribute('class', 'blog');
   }
 }

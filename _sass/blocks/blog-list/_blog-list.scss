@@ -1,0 +1,15 @@
+.blog-list {
+    margin-left: 0;
+    list-style: none;
+}
+    .blog-list__item {
+        margin-bottom: $spacing-unit;
+        padding-bottom: $spacing-unit;
+        border-bottom: 1px solid $grey-color;
+        &:last-child {border: 0;}
+    }
+
+    .blog-list__meta {
+        font-size: $small-font-size;
+        color: $grey-color-dark;
+    }

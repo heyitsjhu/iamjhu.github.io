@@ -5,7 +5,6 @@
 @charset "utf-8";
 
 
-
 // Variables
 $base-font-family:      "Advent Pro", sans-serif;
 $base-font-size:        1em;
@@ -19,9 +18,9 @@ $base-letter-spacing:   0;
 $spacing-unit:          1.25em;
 $radius-size:           3px;
 
-$background-color:      #FAFAFA;    // rgb(250,250,250)
+$background-color:      #FFF;
 $text-color-dark:       #515151;    // rgb(81,81,81)
-$text-color-light:      #FAFAFA; 
+$text-color-light:      #FFF; 
 $brand-color:           #1E7896;    // rgb(30,120,150)
 $brand-color-light:     lighten($brand-color, 20%);
 $brand-color-dark:      darken($brand-color, 20%);
@@ -69,18 +68,24 @@ $on-hd:            1441px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "reset/normalize",
-
         "base",
-        "layout",
 
         "components/buttons",
         "components/containers",
 
-        "blocks/loader",
-        "blocks/navbar",
-        "blocks/section",
-        "blocks/footer",
-        
+        "blocks/loader/loader",
+        "blocks/navbar/navbar",
+        "blocks/footer/footer",
+
+        "blocks/page/page",
+        "blocks/post/post",
+        "blocks/section/section",
+        "blocks/breadcrumbs/breadcrumbs",
+
+        "blocks/blog/blog",
+        "blocks/blog-list/blog-list",
+        "blocks/tags/tags",
+        "blocks/tags-list/tags-list",
+
         "syntax-highlighting"
 ;

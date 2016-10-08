@@ -6,28 +6,29 @@
     width: 100%;
     background-color: $brand-color;
     color: $text-color-light;
+    a {color: $text-color-light;}
 }
+
     .footer__copyright {font-size: $smaller-font-size;}
+    .footer__email {display:none;}
     .footer__social-media {
         display: flex;
         align-items: center;
         font-size: $smaller-font-size;
         a:nth-child(2) {padding-left: 0.416em;}
     }
-    .footer__email {display:none;}
-
-.social-media__icon > svg {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    polygon {fill: $brand-color;}
-    &:hover,
-    &:active {
-        polygon {fill: $text-color-light;}
-        path {fill: $brand-color;}
-    }
-}
+        .social-media__icon > svg {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            polygon {fill: $brand-color;}
+            &:hover,
+            &:active {
+                polygon {fill: $text-color-light;}
+                path {fill: $brand-color;}
+            }
+        }
 
 @include media-query($on-tablet) {
     .footer__email {display: initial;}

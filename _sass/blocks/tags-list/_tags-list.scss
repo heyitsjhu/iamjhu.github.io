@@ -1,0 +1,19 @@
+.tags-list {
+    margin-left: 0;
+    padding-left: $spacing-unit;
+    border-left: 0.125em solid $brand-color;
+    list-style: none;
+}
+
+.tags-list__item {
+    font-size: $small-font-size;
+}
+
+.tags-list__item--active {
+    font-size: $small-font-size;
+    a {
+    color: $brand-color;
+    font-weight: bold;
+    text-decoration: none;
+}
+}

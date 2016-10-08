@@ -1,6 +1,6 @@
 .section {
     font-size: 1rem;
-    margin: $spacing-unit;
+    margin-bottom: $spacing-unit;
     padding: 0 $spacing-unit $spacing-unit;
     &:first-child {border-left: 0.1875em solid $brand-color;}
 }

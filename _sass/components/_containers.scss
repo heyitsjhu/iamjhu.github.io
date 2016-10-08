@@ -2,9 +2,9 @@
  * Containers and Wrappers
  */
 .container {
-    margin: 0 auto;
+    margin: 60px auto;
+    padding: 1.25em;
     width: 100%;
-    height: 100vh;
     max-width: $content-width;
 
     @include animation(scrollup 2s);
