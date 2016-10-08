@@ -1,0 +1,7 @@
+{% if page.url == "/" %}
+  {{ site.title | escape }}
+{% elsif page.title %}
+  {{ page.title | escape }} | Johnny Hu
+{% else %}
+  {{ site.title | escape }}
+{% endif %}
