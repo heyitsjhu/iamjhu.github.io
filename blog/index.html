@@ -7,7 +7,7 @@ weight: 4
 
 <section class="blog" id="all-posts">
   <ul class="blog-list">
-    {% for post in site.posts | limit:5 %}
+    {% for post in site.posts %}
       <li class="blog-list__item">
         <span class="blog-list__meta">
           {{ post.date | date: "%A, %B %-d, %Y" }}
@@ -35,11 +35,14 @@ weight: 4
 <aside class="tags">
   <h4 class="tags__title">Tags</h4>
   <ul class="tags-list">
+    <li class="tags-list__item" id="all-item">
+      <a href onclick="filter('all'); return false;">all ({{ site.posts | size }})</a>
+    </li>
     {% for tag in site.tags %}
       {% assign t = tag | first %}
       {% assign posts = tag | last %}
       <li class="tags-list__item" id="{{ t }}-item">
-        <a href onclick="filter('{{ t }}'); return false;">{{t | downcase }} ({{ posts | size }})</a>
+        <a href onclick="filter('{{ t }}'); return false;">{{ t }} ({{ posts | size }})</a>
       </li>
     {% endfor %}
   </ul>
