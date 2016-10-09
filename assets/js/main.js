@@ -65,5 +65,8 @@ function expandCopyrightText() {
   }
 }
 
-// Listens to the browser's window width
+// Sets initial copyright info based on width
+$(document).ready(expandCopyrightText);
+
+// Listens and adjusts copyright info on browser resize
 $(window).on('resize', expandCopyrightText);
