@@ -1,0 +1,5 @@
+{% if page.url == p.url or (page.url contains p.url and p.url == '/blog/') %}
+  navbar-nav__link--active
+{% else %}
+  navbar-nav__link
+{% endif %}

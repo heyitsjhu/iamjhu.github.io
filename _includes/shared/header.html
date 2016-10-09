@@ -13,12 +13,7 @@
         {% if p.title and p.weight %}
           <li class="navbar-nav__item">
             <a href="{{ p.url | prepend: site.baseurl }}"
-               {% if p.url == page.url %}
-               class="navbar-nav__link--active"
-               {% else %}
-               class="navbar-nav__link"
-               {% endif %}
-            >
+               class="{% include functions/set_active_url.html %}">
               {{ p.title }}
             </a>
           </li>
