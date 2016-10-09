@@ -54,3 +54,16 @@ function showContainer(tag) {
     list.setAttribute('class', 'blog');
   }
 }
+
+// Changes copyright information based on screen width
+function expandCopyrightText() {
+  var windowSize = $(window).width();
+  if(windowSize >= 768) {
+    $('.footer__copyright').html("<span>Copyright 2016 Johnny Hu. All rights reserved.</span>");
+  } else {
+    $('.footer__copyright').html("<span>&copy; 2016 Johnny Hu.</span>");
+  }
+}
+
+// Listens to the browser's window width
+$(window).on('resize', expandCopyrightText);
