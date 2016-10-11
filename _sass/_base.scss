@@ -119,21 +119,24 @@ blockquote {
  */
 pre,
 code {
-    font-size: $small-font-size;
+    font-family: $monospace-font-family;
     border-radius: $radius-size;
     background-color: #EEF;
 }
 
 code {
+    font-size: $smaller-font-size;
     color: $brand-color;
     padding: 0.14285em 0.42857em;
 }
 
 pre {
+    font-size: $small-font-size;
     padding: 8px 12px;
     overflow-x: auto;
 
     > code {
+        font-size: 1em;
         border: 0;
         padding-right: 0;
         padding-left: 0;

@@ -2,6 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @import 'https://fonts.googleapis.com/css?family=Advent+Pro:400,600';
+@import 'https://fonts.googleapis.com/css?family=PT+Mono';
 @charset "utf-8";
 
 
@@ -10,6 +11,7 @@ $base-font-family:      "Advent Pro", sans-serif;
 $base-font-size:        1em;
 $base-font-weight:      400;
 $heading-font-weight:   600;
+$monospace-font-family:      "PT Mono", monospace;
 $small-font-size:       0.875em;
 $smaller-font-size:     0.75em;
 $base-line-height:      1.6;
