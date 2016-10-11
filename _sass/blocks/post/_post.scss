@@ -4,7 +4,8 @@
     font-size: $small-font-size;
     color: $grey-color-dark;
 }
-.post__tag {
-    font-weight: bold;
-    text-transform: capitalize;
+.post__content {padding-bottom: $spacing-unit;}
+.post__footer {
+    padding-top: $spacing-unit;
+    border-top: 0.125em solid $brand-color;
 }
