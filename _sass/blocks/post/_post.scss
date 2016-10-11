@@ -1,3 +1,12 @@
+.post {
+    a {
+        color: $brand-color;
+        border-bottom: 0.125em solid transparent;
+    }
+    a:hover {
+        border-bottom: 0.125em solid $brand-color;
+    }
+}
 .post__header {margin-bottom: $spacing-unit;}
 .post__title {margin-bottom: 0;}
 .post__meta {

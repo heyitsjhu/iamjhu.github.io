@@ -94,7 +94,6 @@ li {
 a,
 a:active,
 a:visited {
-    color: $text-color-dark;
     text-decoration: none;
 }
 
@@ -103,12 +102,10 @@ a:visited {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
+    margin-left: $spacing-unit;
+    padding: 0 $spacing-unit;
+    border-left: 0.1875em solid $brand-color;
+    color: $grey-color-dark;
     > :last-child {margin-bottom: 0;}
 }
 
@@ -136,7 +133,7 @@ pre {
     overflow-x: auto;
 
     > code {
-        font-size: 1em;
+        font-size: $small-font-size;
         border: 0;
         padding-right: 0;
         padding-left: 0;
