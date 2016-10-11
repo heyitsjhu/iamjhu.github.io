@@ -20,8 +20,9 @@
         list-style: none;
         text-transform: uppercase;
     }
-        .navbar-nav__link,
-        .navbar-nav__link--active {
+        a.navbar-nav__link,
+        a.navbar-nav__link--active {
+            color: $text-color-dark;
             display: block;
             text-align: center;
         }
@@ -43,8 +44,9 @@
             padding-right: 1.25em;
             &:last-child {padding-right: 0;}
         }
-        .navbar-nav__link:hover,
-        .navbar-nav__link--active {
+        a.navbar-nav__link:hover,
+        a.navbar-nav__link--active {
+            color: $text-color-dark;
             display: inline;
             border-bottom: 0.125em solid $brand-color;
         }

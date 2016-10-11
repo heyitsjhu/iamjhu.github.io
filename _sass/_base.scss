@@ -95,7 +95,9 @@ a,
 a:active,
 a:visited {
     text-decoration: none;
+    color: $brand-color;
 }
+p > a:hover {border-bottom: 0.125em solid $brand-color;}
 
 
 /**
