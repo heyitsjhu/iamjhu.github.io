@@ -8,12 +8,13 @@ If you've watched the [Railscast episode on facebook authentication][1] recently
 
 To start, below is a list of the gems I'll use in this tutorial so you can add them to your Gemfile at the same time:
 
-```ruby
+{% highlight ruby %}
 # Gemfile
+
 gem 'omniauth', '~> 1.3', '>= 1.3.1'
 gem 'omniauth-facebook', '~> 4.0'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
-```
+{% endhighlight %}
 
 Following along with Ryan's screencast, at 1:40 he enters `localhost:3000` in the "Site URL" field on Facebook's Developer page. To find this field in the current layout, go to Basic Settings, then at the bottom of the screen click on "Add Platform", and then "Website". You should now see a "Site URL" field. Go ahead and enter `http://localhost:3000/` here and save the changes.
 
@@ -23,23 +24,23 @@ At the 4-minute mark, we come across the *environment variables* used to store o
 
 In the command line, run:
 
-```
+{% highlight shell %}
 $ bundle exec figaro install
 
       create  config/application.yml
       append  .gitignore
-```
+{% endhighlight %}
 
 The command will create a new file, `config/application.yml`, and modify your existing `.gitignore`—keeping any environment variables you declare in this new file from being submitting to Git. Open `config/application.yml` and add your environment variables to this file. You can find your APP_ID and SECRET in the Facebook Developer dashboard. It's also located under Basic Settings. If your Rails server is currently running, don't forget to restart it after this step.
 
 Here's an example of what it should look like:
 
-```ruby
+{% highlight ruby %}
 # config/application.yml
 
 FACEBOOK_APP_ID: '<YOUR_APP_ID_STRING_HERE>'
 FACEBOOK_SECRET: '<YOUR_APP_SECRET_STRING_HERE>'
-```
+{% endhighlight %}
 
 Next, Ryan goes over the routes for the application. In newer versions of Rails, you may get an `ArgumentError` when using `match` in your routes without specifying an HTTP method. Something like this:
 
@@ -49,19 +50,21 @@ Next, Ryan goes over the routes for the application. In newer versions of Rails,
 
 To resolve this, update your routes so that each line contains `via: [:get, :post]`, as suggested in the error message.
 
-```ruby
+{% highlight ruby %}
 # config/routes.rb
+
 Rails.application.routes.draw do
   match 'auth/:provider/callback', to: 'sessions#create',                 via: [:get, :post]
   match 'auth/failure',            to: redirect('/'),                     via: [:get, :post]
   match 'signout',                 to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 end
-```
+{% endhighlight %}
 
 At 4:50, we'll modify the code to add an extra layer of protection to our application by extracting the `omniauth.auth` hash into a protected method.
 
-```ruby
-# sessions_controller.rb
+{% highlight ruby %}
+# app/controllers/sessions_controller.rb
+
 class SessionsController < ApplicationController
   def create
     user = User.from_omniauth(auth_hash)
@@ -79,20 +82,21 @@ class SessionsController < ApplicationController
     request.env["omniauth.auth"]
   end
 end
-```
+{% endhighlight %}
 
 At 5:55, due to Rails 4 introducing the use of strong parameters, the `from_omniauth` method will raise an `ActiveModel::ForbiddenAttributesError`
 
 To fix this, change:
 
-```ruby
+{% highlight ruby %}
 where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
-```
+{% endhighlight %}
+
 to:
 
-```ruby
+{% highlight ruby %}
 where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
-```
+{% endhighlight %}
 
 Follow the rest of the video until the end and you should have a working Facebook authentication system in your application!
 
@@ -100,8 +104,9 @@ Follow the rest of the video until the end and you should have a working Faceboo
 
 Personally, I am not very familiar with CoffeeScript and don't plan on learning it anytime soon, so I ended up converting it back to Javascript using an online compiler. I included the code below in case you want to do the same. Don't forget to remove the `.coffee` extension from the filename, too.
 
-```javascript
-// app/assets/javascript/facebook.js.erb
+{% highlight javascript %}
+// app/assets/javascripts/facebook.js.erb
+
 jQuery(function() {
   $('body').prepend('<div id="fb-root"></div>');
   
@@ -138,7 +143,7 @@ window.fbAsyncInit = function() {
   });
   
 };
-```
+{% endhighlight %}
 
 [1]: http://railscasts.com/episodes/360-facebook-authentication "Facebook Authentication by Ryan Bates"
 [2]: https://github.com/laserlemon/figaro, "Figaro gem on GitHub"
