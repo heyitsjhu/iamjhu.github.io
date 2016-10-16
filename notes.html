@@ -1,0 +1,36 @@
+---
+layout: page
+title: Notes
+permalink: /notes/
+weight: 2
+---
+
+<section class="notes">
+  <h2 class="notes__heading">Knowledge Should Be Free</h2>
+  <p class="notes__text">Below is a collection of notes I've taken in my continued pursuit to becoming a web developer. I find some topics harder to understand than others and the act of note-taking helps me retain more of that information. I can also refer back to these notes to refresh my memory when I need it. Hopefully, these notes can prove useful to others who are just learning how to program, as well. This is one of the reasons why I made them available here—and why I love open-source. Knowledge should be free.</p>
+
+  {% for topic in site.note_topics %}
+  {% for note in site.notes %}
+    
+    {% if (note.topic == topic | size) > 0 %}
+    <div class="topic" id="notes-{{ topic }}">
+      <h3 class="topic__heading">{{ topic | capitalize }}</h3>
+      
+      <ul class="notes-list" id="{{ topic }}-list">
+        {% if note.topic == topic %}
+          <li class="notes-list__item">
+            <a class="notes-list__link" href="{{ note.url | prepend: site.baseurl }}"> 
+              {{ note.title }}
+            </a>
+            <span class="notes-list__meta">
+              Last updated: {{ note.updated_on | date: "%B %-d, %Y" }}
+            </span>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+    {% endif %}
+
+  {% endfor %}
+  {% endfor %}
+</section>

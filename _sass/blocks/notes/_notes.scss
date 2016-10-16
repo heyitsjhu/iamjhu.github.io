@@ -1,0 +1,34 @@
+.topic__heading {
+    margin-bottom: $spacing-unit / 4;
+}
+
+.notes-list {
+    margin-left: 0;
+    list-style: none;
+}
+    .notes-list__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $spacing-unit;
+        padding-bottom: $spacing-unit;
+    }
+
+    .notes-list__link {
+        border-bottom: 0.125em solid transparent;
+        &:hover {
+            border-color: $brand-color;
+        }
+    }
+
+    .notes-list__meta {
+        display: none;
+        padding-top: 4px;
+        font-size: $smaller-font-size;
+        color: $grey-color-dark;
+    }
+
+@include media-query($on-desktop) {
+    .notes-list__meta {
+        display: initial;
+    }
+}

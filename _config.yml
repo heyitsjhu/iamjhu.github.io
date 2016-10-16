@@ -17,12 +17,18 @@ url: "http://www.iamjhu.com" # the base hostname & protocol for your site
 linkedin_username: jgeehenhu
 github_username:   iamjhu
 
+note_topics: ["rspec", "cucumber"]
+
 # Build settings
 markdown: kramdown
 
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+collections:
+  notes:
+    output: true
 
 defaults:
   -
@@ -32,3 +38,9 @@ defaults:
     values:
       layout: "post"
       categories: ["blog"]
+  -
+    scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "note"
