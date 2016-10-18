@@ -17,7 +17,7 @@ url: "http://www.iamjhu.com" # the base hostname & protocol for your site
 linkedin_username: jgeehenhu
 github_username:   iamjhu
 
-note_topics: ["rspec"]
+note_topics: ["rspec", "cucumber"]
 
 # Build settings
 markdown: kramdown
