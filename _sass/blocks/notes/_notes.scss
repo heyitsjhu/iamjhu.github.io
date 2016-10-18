@@ -6,13 +6,6 @@
     margin-left: 0;
     list-style: none;
 }
-    .notes-list__item {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: $spacing-unit;
-        padding-bottom: $spacing-unit;
-    }
-
     .notes-list__link {
         border-bottom: 0.125em solid transparent;
         &:hover {

@@ -23,9 +23,6 @@ weight: 2
         <a class="notes-list__link" href="{{ note.url | prepend: site.baseurl }}"> 
           {{ note.title }}
         </a>
-        <span class="notes-list__meta">
-          Last updated: {{ note.updated_on | date: "%B %-d, %Y" }}
-        </span>
       </li>
       {% endif %}
       {% endfor %}
