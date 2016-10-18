@@ -5,11 +5,13 @@
     .blog-list__item {
         margin-bottom: $spacing-unit;
         padding-bottom: $spacing-unit;
-        border-bottom: 1px solid $grey-color;
+        border-bottom: 0.125em solid $grey-color;
         &:last-child {border: 0;}
     }
 
     .blog-list__meta {
+        position: relative;
+        top: 0.3125em;
         font-size: $small-font-size;
         color: $grey-color-dark;
     }
