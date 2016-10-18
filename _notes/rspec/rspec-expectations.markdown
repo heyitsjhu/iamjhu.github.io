@@ -1,6 +1,6 @@
 ---
 title: "RSpec Expectations"
-updated_on: 2016-10-17 10:37:30 -0700
+last_updated: 2016-10-17 10:37:30 -0700
 topic: "rspec"
 ---
 
@@ -202,7 +202,7 @@ This level of consciseness does come with a fair warning. Relying on RSpec's imp
 Sources: [RSpec Built-in Matchers][1], [The RSpec Book][2]
 
 
-**Potential topics to be added in the future: Owned Collections, Unowned Collections*
+*Potential topics to be added in the future: Owned Collections, Unowned Collections*
 
 [1]: https://relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
 [2]: https://pragprog.com/book/achbd/the-rspec-book
