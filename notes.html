@@ -6,7 +6,7 @@ weight: 2
 ---
 
 <section class="notes">
-  <h2 class="notes__heading">Knowledge Should Be Free</h2>
+  <h1 class="notes__heading">Knowledge Should Be Free</h1>
   <p class="notes__text">Below is a collection of notes I've taken in my continued pursuit to becoming a web developer. I find some topics harder to understand than others and the act of note-taking helps me retain more of that information. I can also refer back to these notes to refresh my memory when I need it. Hopefully, these notes can prove useful to others who are just learning how to program, as well. This is one of the reasons why I made them available here—and why I love open-source. Knowledge should be free.</p>
 
   {% assign topics = site.note_topics | sort %}
@@ -14,7 +14,7 @@ weight: 2
   
   {% for topic in topics %}
   <div class="topic" id="notes-{{ topic }}">
-    <h3 class="topic__heading">{{ topic | capitalize }}</h3>
+    <h2 class="topic__heading">{{ topic | capitalize }}</h2>
 
     <ul class="notes-list" id="{{ topic }}-list">
       {% for note in notes %}

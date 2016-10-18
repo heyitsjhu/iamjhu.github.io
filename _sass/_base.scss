@@ -32,12 +32,14 @@ body {
 }
 
 /**
- * Set `margin-bottom` to maintain vertical rhythm
+ * Set `margin-bottom` to some common elements
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {margin-bottom: $spacing-unit;}
+h1, h2, p, ul, ol, pre, 
+blockquote, figure {margin-bottom: $spacing-unit;}
+
+h3, h4, h5, h6, dl, 
+%vertical-rhythm {margin-bottom: $spacing-unit / 2;}
+
 
 /**
  * Headings
@@ -81,6 +83,7 @@ figcaption {font-size: $small-font-size;}
  * Lists
  */
 ul, ol {margin-left: $spacing-unit;}
+
 
 li {
     > ul, 
