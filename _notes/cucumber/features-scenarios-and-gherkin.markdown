@@ -1,5 +1,5 @@
 ---
-title: "Features, Scenarios, and Step Definitions"
+title: "Features, Scenarios, and Gherkin"
 last_updated: 2016-10-18 11:35:14 -0700
 topic: "cucumber"
 ---
